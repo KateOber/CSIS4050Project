@@ -10,4 +10,6 @@
 [NetPrice] NUMERIC,
 [Tax] NUMERIC,
 [Discount] NUMERIC
+
+CONSTRAINT [FK_Transactions_Inventory_ProductId] FOREIGN KEY ([ProductId]) REFERENCES [Inventory] ([ProductId])
 )

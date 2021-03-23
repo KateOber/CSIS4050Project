@@ -57,11 +57,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="TheMobileShopDB.publish.xml" />
+    <None Include="SeedDatabase.sql" />
   </ItemGroup>
   <ItemGroup>
-    <Build Include="Employee.sql" />
+    <Build Include="Employees.sql" />
     <Build Include="Inventory.sql" />
-    <Build Include="Category.sql" />
-    <Build Include="Transaction.sql" />
+    <Build Include="Categories.sql" />
+    <Build Include="Transactions.sql" />
   </ItemGroup>
 </Project>
