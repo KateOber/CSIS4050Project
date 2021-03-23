@@ -1,0 +1,2 @@
+C:\Users\Kate\Documents\GitHub\CSIS4050Project\The Mobile Shop\The Mobile Shop\obj\Debug\The Mobile Shop.csprojAssemblyReference.cache
+C:\Users\Kate\Documents\GitHub\CSIS4050Project\The Mobile Shop\The Mobile Shop\obj\Debug\The Mobile Shop.csproj.CoreCompileInputs.cache
