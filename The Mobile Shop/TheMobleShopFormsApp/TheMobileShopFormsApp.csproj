@@ -72,6 +72,9 @@
     </Compile>
     <Compile Include="TheMobileShopFormsProgram.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Checkout.resx">
+      <DependentUpon>Checkout.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TheMobileShopInventory.resx">
       <DependentUpon>TheMobileShopInventory.cs</DependentUpon>
     </EmbeddedResource>

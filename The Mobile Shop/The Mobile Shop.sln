@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "The Mobile Shop", "The Mobi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheMobileShopFormsApp", "TheMobleShopFormsApp\TheMobileShopFormsApp.csproj", "{D4A0ACF6-5BBA-408F-A75A-366657B3B93C}"
 EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "TheMobileShopDB", "TheMobileShopDB\TheMobileShopDB.sqlproj", "{9350B60D-80F3-49D0-9B07-98D59191518E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,12 @@ Global
 		{D4A0ACF6-5BBA-408F-A75A-366657B3B93C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D4A0ACF6-5BBA-408F-A75A-366657B3B93C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D4A0ACF6-5BBA-408F-A75A-366657B3B93C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9350B60D-80F3-49D0-9B07-98D59191518E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9350B60D-80F3-49D0-9B07-98D59191518E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9350B60D-80F3-49D0-9B07-98D59191518E}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{9350B60D-80F3-49D0-9B07-98D59191518E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9350B60D-80F3-49D0-9B07-98D59191518E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9350B60D-80F3-49D0-9B07-98D59191518E}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

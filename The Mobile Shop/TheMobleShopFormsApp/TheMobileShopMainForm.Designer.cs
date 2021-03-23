@@ -53,8 +53,10 @@ namespace TheMobleShopFormsApp
             this.label10 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.listBoxCategory = new System.Windows.Forms.ListBox();
             this.listBoxBrand = new System.Windows.Forms.ListBox();
+            this.listBoxCategory = new System.Windows.Forms.ListBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -244,6 +246,8 @@ namespace TheMobleShopFormsApp
             this.groupBox3.Controls.Add(this.checkBox1);
             this.groupBox3.Controls.Add(this.numericUpDown2);
             this.groupBox3.Controls.Add(this.label10);
+            this.groupBox3.Controls.Add(this.label12);
+            this.groupBox3.Controls.Add(this.label11);
             this.groupBox3.Location = new System.Drawing.Point(548, 327);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(342, 276);
@@ -286,6 +290,15 @@ namespace TheMobleShopFormsApp
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Search";
             // 
+            // listBoxBrand
+            // 
+            this.listBoxBrand.FormattingEnabled = true;
+            this.listBoxBrand.ItemHeight = 16;
+            this.listBoxBrand.Location = new System.Drawing.Point(146, 60);
+            this.listBoxBrand.Name = "listBoxBrand";
+            this.listBoxBrand.Size = new System.Drawing.Size(120, 84);
+            this.listBoxBrand.TabIndex = 18;
+            // 
             // listBoxCategory
             // 
             this.listBoxCategory.FormattingEnabled = true;
@@ -295,14 +308,23 @@ namespace TheMobleShopFormsApp
             this.listBoxCategory.Size = new System.Drawing.Size(120, 84);
             this.listBoxCategory.TabIndex = 17;
             // 
-            // listBoxBrand
+            // label11
             // 
-            this.listBoxBrand.FormattingEnabled = true;
-            this.listBoxBrand.ItemHeight = 16;
-            this.listBoxBrand.Location = new System.Drawing.Point(146, 60);
-            this.listBoxBrand.Name = "listBoxBrand";
-            this.listBoxBrand.Size = new System.Drawing.Size(120, 84);
-            this.listBoxBrand.TabIndex = 18;
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(14, 109);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(69, 17);
+            this.label11.TabIndex = 8;
+            this.label11.Text = "Sub Total";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(264, 176);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(48, 17);
+            this.label12.TabIndex = 13;
+            this.label12.Text = "$ 0.00";
             // 
             // TheMobileShopMainForm
             // 
@@ -370,5 +392,7 @@ namespace TheMobleShopFormsApp
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.ListBox listBoxBrand;
         private System.Windows.Forms.ListBox listBoxCategory;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label11;
     }
 }
