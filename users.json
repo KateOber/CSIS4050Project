@@ -1,0 +1,102 @@
+[
+  {
+    "id": 1,
+    "first_name": "Kate",
+    "last_name": "O",
+    "email": "kate@student.douglas.ca",
+    "gender": "Female",
+    "employee_code": "ADM-001",
+    "role": "A",
+    "phone": "1234567890"
+  },
+  {
+    "id": 2,
+    "first_name": "Indu Priya",
+    "last_name": "Addepalli",
+    "email": "indupriyaaddepalli@student.douglas.ca",
+    "gender": "Female",
+    "employee_code": "ADM-002",
+    "role": "A",
+    "phone": "1234567891"
+  },
+  {
+    "id": 3,
+    "first_name": "Naga Sudheer",
+    "last_name": "Bolla",
+    "email": "sudheerbolla@student.douglas.ca",
+    "gender": "Male",
+    "employee_code": "ADM-003",
+    "role": "A",
+    "phone": "1234567892"
+  },
+  {
+    "id": 4,
+    "first_name": "Jared",
+    "last_name": "Bowland",
+    "email": "jbowland3@oaic.gov.au",
+    "gender": "Male",
+    "employee_code": "EMP-001",
+    "role": "E",
+    "phone": "7784567890"
+  },
+  {
+    "id": 5,
+    "first_name": "Cristen",
+    "last_name": "Stares",
+    "email": "cstares4@hhs.gov",
+    "gender": "Genderfluid",
+    "employee_code": "EMP-002",
+    "role": "E",
+    "phone": "7784567891"
+  },
+  {
+    "id": 6,
+    "first_name": "Boy",
+    "last_name": "Dupre",
+    "email": "bdupre5@facebook.com",
+    "gender": "Bigender",
+    "employee_code": "EMP-003",
+    "role": "E",
+    "phone": "7784567892"
+  },
+  {
+    "id": 7,
+    "first_name": "Gwynne",
+    "last_name": "Armitt",
+    "email": "garmitt6@altervista.org",
+    "gender": "Male",
+    "employee_code": "EMP-004",
+    "role": "E",
+    "phone": "7784567893"
+  },
+  {
+    "id": 8,
+    "first_name": "Willem",
+    "last_name": "Swadling",
+    "email": "wswadling7@themeforest.net",
+    "gender": "Agender",
+    "employee_code": "EMP-005",
+    "role": "E",
+    "phone": "7784567894"
+  },
+  {
+    "id": 9,
+    "first_name": "Tova",
+    "last_name": "Minard",
+    "email": "tminard8@vimeo.com",
+    "gender": "Female",
+    "employee_code": "EMP-006",
+    "role": "E",
+    "phone": "7784567895"
+  },
+  {
+    "id": 10,
+    "first_name": "Talyah",
+    "last_name": "De la croix",
+    "email": "tdelacroix9@soup.io",
+    "gender": "Genderfluid",
+    "employee_code": "EMP-007",
+    "role": "E",
+    "phone": "7784567896"
+  }
+]

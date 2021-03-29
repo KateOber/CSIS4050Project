@@ -4,7 +4,6 @@
 [Name] NVARCHAR(50) NOT NULL, 
 [Description] NVARCHAR(250),
 [Quantity] INT NOT NULL,
-[Price] NUMERIC,
 [CategoryId] INT NOT NULL,
 [Brand] NVARCHAR(50),
 [GrossPrice] NUMERIC,
