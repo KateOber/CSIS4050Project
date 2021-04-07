@@ -64,5 +64,9 @@
     <Build Include="Inventory.sql" />
     <Build Include="Categories.sql" />
     <Build Include="Transactions.sql" />
+    <Build Include="TransactionProducts.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="TheMobileShopDB.refactorlog" />
   </ItemGroup>
 </Project>

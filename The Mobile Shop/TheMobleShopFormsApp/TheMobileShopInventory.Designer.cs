@@ -29,81 +29,61 @@ namespace TheMobleShopFormsApp
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.textBoxName = new System.Windows.Forms.TextBox();
+            this.textBoxCost = new System.Windows.Forms.TextBox();
+            this.buttonAddItem = new System.Windows.Forms.Button();
+            this.labelName = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.labelCost = new System.Windows.Forms.Label();
+            this.listBoxCategory = new System.Windows.Forms.ListBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.listBox2 = new System.Windows.Forms.ListBox();
+            this.labelError = new System.Windows.Forms.Label();
+            this.buttonManageCategories = new System.Windows.Forms.Button();
+            this.buttonUpdateItem = new System.Windows.Forms.Button();
+            this.labelQuantity = new System.Windows.Forms.Label();
+            this.labelPrice = new System.Windows.Forms.Label();
+            this.textBoxPrice = new System.Windows.Forms.TextBox();
+            this.textBoxBrand = new System.Windows.Forms.TextBox();
             this.numericUpDownQuantity = new System.Windows.Forms.NumericUpDown();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.labelDescription = new System.Windows.Forms.Label();
+            this.textBoxDescription = new System.Windows.Forms.TextBox();
+            this.listBoxInventory = new System.Windows.Forms.ListBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownQuantity)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox1
+            // textBoxName
             // 
-            this.textBox1.Location = new System.Drawing.Point(18, 47);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
-            this.textBox1.TabIndex = 0;
+            this.textBoxName.Location = new System.Drawing.Point(18, 47);
+            this.textBoxName.Name = "textBoxName";
+            this.textBoxName.Size = new System.Drawing.Size(244, 22);
+            this.textBoxName.TabIndex = 0;
             // 
-            // textBox3
+            // textBoxCost
             // 
-            this.textBox3.Location = new System.Drawing.Point(193, 49);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 22);
-            this.textBox3.TabIndex = 0;
+            this.textBoxCost.Location = new System.Drawing.Point(289, 49);
+            this.textBoxCost.Name = "textBoxCost";
+            this.textBoxCost.Size = new System.Drawing.Size(100, 22);
+            this.textBoxCost.TabIndex = 0;
             // 
-            // textBox4
+            // buttonAddItem
             // 
-            this.textBox4.Location = new System.Drawing.Point(193, 156);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 22);
-            this.textBox4.TabIndex = 0;
+            this.buttonAddItem.Location = new System.Drawing.Point(18, 505);
+            this.buttonAddItem.Name = "buttonAddItem";
+            this.buttonAddItem.Size = new System.Drawing.Size(100, 47);
+            this.buttonAddItem.TabIndex = 2;
+            this.buttonAddItem.Text = "Add Item";
+            this.buttonAddItem.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // labelName
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(24, 32);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(495, 529);
-            this.dataGridView1.TabIndex = 1;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(108, 466);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 34);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Add Item";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(15, 27);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(45, 17);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Name";
+            this.labelName.AutoSize = true;
+            this.labelName.Location = new System.Drawing.Point(15, 27);
+            this.labelName.Name = "labelName";
+            this.labelName.Size = new System.Drawing.Size(45, 17);
+            this.labelName.TabIndex = 3;
+            this.labelName.Text = "Name";
             // 
             // label2
             // 
@@ -123,158 +103,155 @@ namespace TheMobleShopFormsApp
             this.label3.TabIndex = 3;
             this.label3.Text = "Category";
             // 
-            // label4
+            // labelCost
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(190, 29);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(82, 17);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Gross Price";
+            this.labelCost.AutoSize = true;
+            this.labelCost.Location = new System.Drawing.Point(286, 29);
+            this.labelCost.Name = "labelCost";
+            this.labelCost.Size = new System.Drawing.Size(36, 17);
+            this.labelCost.TabIndex = 3;
+            this.labelCost.Text = "Cost";
             // 
-            // listBox1
+            // listBoxCategory
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 16;
-            this.listBox1.Location = new System.Drawing.Point(18, 103);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(120, 84);
-            this.listBox1.TabIndex = 4;
+            this.listBoxCategory.FormattingEnabled = true;
+            this.listBoxCategory.ItemHeight = 16;
+            this.listBoxCategory.Location = new System.Drawing.Point(18, 103);
+            this.listBoxCategory.Name = "listBoxCategory";
+            this.listBoxCategory.Size = new System.Drawing.Size(244, 84);
+            this.listBoxCategory.TabIndex = 4;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.textBox5);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.listBox2);
+            this.groupBox1.Controls.Add(this.labelError);
+            this.groupBox1.Controls.Add(this.buttonManageCategories);
+            this.groupBox1.Controls.Add(this.buttonUpdateItem);
+            this.groupBox1.Controls.Add(this.buttonAddItem);
+            this.groupBox1.Controls.Add(this.labelQuantity);
+            this.groupBox1.Controls.Add(this.labelPrice);
+            this.groupBox1.Controls.Add(this.textBoxPrice);
+            this.groupBox1.Controls.Add(this.labelCost);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.listBox1);
-            this.groupBox1.Controls.Add(this.textBox4);
+            this.groupBox1.Controls.Add(this.listBoxCategory);
+            this.groupBox1.Controls.Add(this.textBoxBrand);
             this.groupBox1.Controls.Add(this.numericUpDownQuantity);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.label10);
-            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.textBoxCost);
+            this.groupBox1.Controls.Add(this.labelDescription);
+            this.groupBox1.Controls.Add(this.labelName);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.textBox6);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Location = new System.Drawing.Point(552, 32);
+            this.groupBox1.Controls.Add(this.textBoxDescription);
+            this.groupBox1.Controls.Add(this.textBoxName);
+            this.groupBox1.Location = new System.Drawing.Point(1050, 28);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(350, 529);
+            this.groupBox1.Size = new System.Drawing.Size(395, 577);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Add or Edit Item";
             // 
-            // label9
+            // labelError
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(84, 503);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(158, 17);
-            this.label9.TabIndex = 9;
-            this.label9.Text = "Error/Success Message";
-            this.label9.Visible = false;
+            this.labelError.AutoSize = true;
+            this.labelError.Location = new System.Drawing.Point(190, 551);
+            this.labelError.Name = "labelError";
+            this.labelError.Size = new System.Drawing.Size(0, 17);
+            this.labelError.TabIndex = 9;
+            this.labelError.Visible = false;
             // 
-            // label7
+            // buttonManageCategories
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(190, 203);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(61, 17);
-            this.label7.TabIndex = 8;
-            this.label7.Text = "Quantity";
+            this.buttonManageCategories.Location = new System.Drawing.Point(283, 505);
+            this.buttonManageCategories.Name = "buttonManageCategories";
+            this.buttonManageCategories.Size = new System.Drawing.Size(106, 47);
+            this.buttonManageCategories.TabIndex = 2;
+            this.buttonManageCategories.Text = "Manage Categories";
+            this.buttonManageCategories.UseVisualStyleBackColor = true;
             // 
-            // label6
+            // buttonUpdateItem
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(190, 136);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(31, 17);
-            this.label6.TabIndex = 7;
-            this.label6.Text = "Tax";
+            this.buttonUpdateItem.Location = new System.Drawing.Point(151, 505);
+            this.buttonUpdateItem.Name = "buttonUpdateItem";
+            this.buttonUpdateItem.Size = new System.Drawing.Size(100, 47);
+            this.buttonUpdateItem.TabIndex = 2;
+            this.buttonUpdateItem.Text = "Update Item";
+            this.buttonUpdateItem.UseVisualStyleBackColor = true;
             // 
-            // label8
+            // labelQuantity
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(190, 263);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(40, 17);
-            this.label8.TabIndex = 6;
-            this.label8.Text = "Price";
+            this.labelQuantity.AutoSize = true;
+            this.labelQuantity.Location = new System.Drawing.Point(286, 203);
+            this.labelQuantity.Name = "labelQuantity";
+            this.labelQuantity.Size = new System.Drawing.Size(61, 17);
+            this.labelQuantity.TabIndex = 8;
+            this.labelQuantity.Text = "Quantity";
             // 
-            // label5
+            // labelPrice
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(190, 83);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(66, 17);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "Net Price";
+            this.labelPrice.AutoSize = true;
+            this.labelPrice.Location = new System.Drawing.Point(286, 83);
+            this.labelPrice.Name = "labelPrice";
+            this.labelPrice.Size = new System.Drawing.Size(40, 17);
+            this.labelPrice.TabIndex = 6;
+            this.labelPrice.Text = "Price";
             // 
-            // textBox5
+            // textBoxPrice
             // 
-            this.textBox5.Location = new System.Drawing.Point(193, 283);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 22);
-            this.textBox5.TabIndex = 5;
+            this.textBoxPrice.Location = new System.Drawing.Point(289, 103);
+            this.textBoxPrice.Name = "textBoxPrice";
+            this.textBoxPrice.Size = new System.Drawing.Size(100, 22);
+            this.textBoxPrice.TabIndex = 5;
             // 
-            // textBox2
+            // textBoxBrand
             // 
-            this.textBox2.Location = new System.Drawing.Point(193, 103);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 22);
-            this.textBox2.TabIndex = 5;
-            // 
-            // listBox2
-            // 
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.ItemHeight = 16;
-            this.listBox2.Location = new System.Drawing.Point(18, 221);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(120, 84);
-            this.listBox2.TabIndex = 4;
+            this.textBoxBrand.Location = new System.Drawing.Point(18, 221);
+            this.textBoxBrand.Name = "textBoxBrand";
+            this.textBoxBrand.Size = new System.Drawing.Size(244, 22);
+            this.textBoxBrand.TabIndex = 0;
             // 
             // numericUpDownQuantity
             // 
-            this.numericUpDownQuantity.Location = new System.Drawing.Point(193, 221);
+            this.numericUpDownQuantity.Location = new System.Drawing.Point(289, 221);
             this.numericUpDownQuantity.Name = "numericUpDownQuantity";
             this.numericUpDownQuantity.Size = new System.Drawing.Size(100, 22);
             this.numericUpDownQuantity.TabIndex = 4;
             // 
-            // textBox6
+            // labelDescription
             // 
-            this.textBox6.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.textBox6.Location = new System.Drawing.Point(18, 366);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox6.Size = new System.Drawing.Size(275, 22);
-            this.textBox6.TabIndex = 0;
-            this.textBox6.WordWrap = false;
+            this.labelDescription.AutoSize = true;
+            this.labelDescription.Location = new System.Drawing.Point(15, 259);
+            this.labelDescription.Name = "labelDescription";
+            this.labelDescription.Size = new System.Drawing.Size(79, 17);
+            this.labelDescription.TabIndex = 3;
+            this.labelDescription.Text = "Description";
             // 
-            // label10
+            // textBoxDescription
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(15, 346);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(79, 17);
-            this.label10.TabIndex = 3;
-            this.label10.Text = "Description";
+            this.textBoxDescription.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.textBoxDescription.Location = new System.Drawing.Point(18, 279);
+            this.textBoxDescription.Multiline = true;
+            this.textBoxDescription.Name = "textBoxDescription";
+            this.textBoxDescription.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBoxDescription.Size = new System.Drawing.Size(371, 206);
+            this.textBoxDescription.TabIndex = 0;
+            this.textBoxDescription.WordWrap = false;
+            // 
+            // listBoxInventory
+            // 
+            this.listBoxInventory.FormattingEnabled = true;
+            this.listBoxInventory.ItemHeight = 16;
+            this.listBoxInventory.Location = new System.Drawing.Point(26, 41);
+            this.listBoxInventory.Name = "listBoxInventory";
+            this.listBoxInventory.Size = new System.Drawing.Size(1018, 564);
+            this.listBoxInventory.TabIndex = 10;
             // 
             // TheMobileShopInventory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(914, 595);
-            this.Controls.Add(this.dataGridView1);
+            this.ClientSize = new System.Drawing.Size(1468, 654);
+            this.Controls.Add(this.listBoxInventory);
             this.Controls.Add(this.groupBox1);
             this.Name = "TheMobileShopInventory";
             this.Text = "Inventory";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownQuantity)).EndInit();
@@ -284,27 +261,25 @@ namespace TheMobleShopFormsApp
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBoxName;
+        private System.Windows.Forms.TextBox textBoxCost;
+        private System.Windows.Forms.Button buttonAddItem;
+        private System.Windows.Forms.Label labelName;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Label labelCost;
+        private System.Windows.Forms.ListBox listBoxCategory;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.NumericUpDown numericUpDownQuantity;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.ListBox listBox2;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.Label labelError;
+        private System.Windows.Forms.Label labelQuantity;
+        private System.Windows.Forms.Label labelPrice;
+        private System.Windows.Forms.TextBox textBoxPrice;
+        private System.Windows.Forms.Label labelDescription;
+        private System.Windows.Forms.TextBox textBoxDescription;
+        private System.Windows.Forms.Button buttonManageCategories;
+        private System.Windows.Forms.Button buttonUpdateItem;
+        private System.Windows.Forms.TextBox textBoxBrand;
+        private System.Windows.Forms.ListBox listBoxInventory;
     }
 }

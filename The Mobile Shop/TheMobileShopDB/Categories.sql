@@ -2,5 +2,5 @@
 (
 [CategoryId] INT NOT NULL PRIMARY KEY IDENTITY,
 [CategoryCode] NVARCHAR (10) NOT NULL UNIQUE,
-[CategoryName] NVARCHAR(50)
+[CategoryName] NVARCHAR(50) NOT NULL
 )
