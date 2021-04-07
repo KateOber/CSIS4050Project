@@ -1,0 +1,20 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       None
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       None
+
+** User actions
+     Create
+       [dbo].[Categories] (Table)
+       [dbo].[Employees] (Table)
+       [dbo].[Inventory] (Table)
+       [dbo].[Transactions] (Table)
+       [dbo].[FK_Inventory_Categories_CategoryId] (Foreign Key)
+       [dbo].[FK_Transactions_Inventory_ProductId] (Foreign Key)
+
+** Supporting actions

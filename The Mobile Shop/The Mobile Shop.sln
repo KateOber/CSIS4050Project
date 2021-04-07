@@ -3,7 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31105.61
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "The Mobile Shop", "The Mobile Shop\The Mobile Shop.csproj", "{6933CFE7-3EE3-4B47-9B08-6F109687B938}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheMobileShopFormsApp", "TheMobleShopFormsApp\TheMobileShopFormsApp.csproj", "{D4A0ACF6-5BBA-408F-A75A-366657B3B93C}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "TheMobileShopDB", "TheMobileShopDB\TheMobileShopDB.sqlproj", "{9350B60D-80F3-49D0-9B07-98D59191518E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheMobileShopCodeFirstFromDB", "TheMobileShopCodeFirstFromDB\TheMobileShopCodeFirstFromDB.csproj", "{64E90EB4-D7FA-48E1-AECE-82AD248B5B59}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheMobileShopValidation", "TheMobileShopValidation\TheMobileShopValidation.csproj", "{5C36DDC0-B877-4498-A8D1-26CF3B808AA3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFControllerUtilities", "EFControllerUtilities\EFControllerUtilities.csproj", "{7A3A26FA-D137-4D0C-ACC1-41BC6517EE5A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataTableAccessLayer", "DataTableAccessLayer\DataTableAccessLayer.csproj", "{9528D2A3-0473-4BFB-9306-6BEA339A6650}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +21,32 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{6933CFE7-3EE3-4B47-9B08-6F109687B938}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6933CFE7-3EE3-4B47-9B08-6F109687B938}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6933CFE7-3EE3-4B47-9B08-6F109687B938}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6933CFE7-3EE3-4B47-9B08-6F109687B938}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4A0ACF6-5BBA-408F-A75A-366657B3B93C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4A0ACF6-5BBA-408F-A75A-366657B3B93C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4A0ACF6-5BBA-408F-A75A-366657B3B93C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4A0ACF6-5BBA-408F-A75A-366657B3B93C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9350B60D-80F3-49D0-9B07-98D59191518E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9350B60D-80F3-49D0-9B07-98D59191518E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9350B60D-80F3-49D0-9B07-98D59191518E}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{9350B60D-80F3-49D0-9B07-98D59191518E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9350B60D-80F3-49D0-9B07-98D59191518E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9350B60D-80F3-49D0-9B07-98D59191518E}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{64E90EB4-D7FA-48E1-AECE-82AD248B5B59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64E90EB4-D7FA-48E1-AECE-82AD248B5B59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64E90EB4-D7FA-48E1-AECE-82AD248B5B59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64E90EB4-D7FA-48E1-AECE-82AD248B5B59}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C36DDC0-B877-4498-A8D1-26CF3B808AA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C36DDC0-B877-4498-A8D1-26CF3B808AA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C36DDC0-B877-4498-A8D1-26CF3B808AA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C36DDC0-B877-4498-A8D1-26CF3B808AA3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A3A26FA-D137-4D0C-ACC1-41BC6517EE5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A3A26FA-D137-4D0C-ACC1-41BC6517EE5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A3A26FA-D137-4D0C-ACC1-41BC6517EE5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A3A26FA-D137-4D0C-ACC1-41BC6517EE5A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9528D2A3-0473-4BFB-9306-6BEA339A6650}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9528D2A3-0473-4BFB-9306-6BEA339A6650}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9528D2A3-0473-4BFB-9306-6BEA339A6650}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9528D2A3-0473-4BFB-9306-6BEA339A6650}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

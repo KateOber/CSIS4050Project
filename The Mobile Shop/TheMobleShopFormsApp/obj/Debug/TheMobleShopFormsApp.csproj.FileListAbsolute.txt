@@ -1,0 +1,12 @@
+C:\Users\Kate\Documents\GitHub\CSIS4050Project\The Mobile Shop\TheMobleShopFormsApp\bin\Debug\TheMobleShopFormsApp.exe.config
+C:\Users\Kate\Documents\GitHub\CSIS4050Project\The Mobile Shop\TheMobleShopFormsApp\bin\Debug\TheMobleShopFormsApp.exe
+C:\Users\Kate\Documents\GitHub\CSIS4050Project\The Mobile Shop\TheMobleShopFormsApp\bin\Debug\TheMobleShopFormsApp.pdb
+C:\Users\Kate\Documents\GitHub\CSIS4050Project\The Mobile Shop\TheMobleShopFormsApp\obj\Debug\TheMobleShopFormsApp.csprojAssemblyReference.cache
+C:\Users\Kate\Documents\GitHub\CSIS4050Project\The Mobile Shop\TheMobleShopFormsApp\obj\Debug\TheMobleShopFormsApp.TheMobileShopInventory.resources
+C:\Users\Kate\Documents\GitHub\CSIS4050Project\The Mobile Shop\TheMobleShopFormsApp\obj\Debug\TheMobleShopFormsApp.Properties.Resources.resources
+C:\Users\Kate\Documents\GitHub\CSIS4050Project\The Mobile Shop\TheMobleShopFormsApp\obj\Debug\TheMobleShopFormsApp.TheMobileShopLogin.resources
+C:\Users\Kate\Documents\GitHub\CSIS4050Project\The Mobile Shop\TheMobleShopFormsApp\obj\Debug\TheMobleShopFormsApp.TheMobileShopMainForm.resources
+C:\Users\Kate\Documents\GitHub\CSIS4050Project\The Mobile Shop\TheMobleShopFormsApp\obj\Debug\TheMobleShopFormsApp.csproj.GenerateResource.cache
+C:\Users\Kate\Documents\GitHub\CSIS4050Project\The Mobile Shop\TheMobleShopFormsApp\obj\Debug\TheMobleShopFormsApp.csproj.CoreCompileInputs.cache
+C:\Users\Kate\Documents\GitHub\CSIS4050Project\The Mobile Shop\TheMobleShopFormsApp\obj\Debug\TheMobleShopFormsApp.exe
+C:\Users\Kate\Documents\GitHub\CSIS4050Project\The Mobile Shop\TheMobleShopFormsApp\obj\Debug\TheMobleShopFormsApp.pdb
