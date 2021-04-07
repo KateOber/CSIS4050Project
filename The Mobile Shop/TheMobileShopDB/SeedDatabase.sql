@@ -60,15 +60,15 @@ GO
 
 SET IDENTITY_INSERT [dbo].[Transactions] ON
 INSERT INTO [dbo].[Transactions] ([TransactionId],[Date],[PaymentMethod],[TotalCost],[TaxAmount],[TotalDiscount],[TotalPrice],[EmployeeId]) VALUES ('1','2021-04-03','Cash','2300.00','480.12','20.00','4000.50','1');
-INSERT INTO [dbo].[Transactions] ([TransactionId],[Date],[PaymentMethod],[TotalCost],[TaxAmount],[TotalDiscount],[TotalPrice],[EmployeeId]) VALUES ('2','2021-02-12','CreditCard','149.99','39.99','4.99','189.99','2');
+INSERT INTO [dbo].[Transactions] ([TransactionId],[Date],[PaymentMethod],[TotalCost],[TaxAmount],[TotalDiscount],[TotalPrice],[EmployeeId]) VALUES ('2','2021-02-12','Cash','149.99','39.99','4.99','189.99','2');
 INSERT INTO [dbo].[Transactions] ([TransactionId],[Date],[PaymentMethod],[TotalCost],[TaxAmount],[TotalDiscount],[TotalPrice],[EmployeeId]) VALUES ('3','2021-03-15','Cash','29.99','4.99','0.00','34.98','3');
-INSERT INTO [dbo].[Transactions] ([TransactionId],[Date],[PaymentMethod],[TotalCost],[TaxAmount],[TotalDiscount],[TotalPrice],[EmployeeId]) VALUES ('4','2021-03-16','DebitCard','129.99','39.99','9.99','169.98','3');
-INSERT INTO [dbo].[Transactions] ([TransactionId],[Date],[PaymentMethod],[TotalCost],[TaxAmount],[TotalDiscount],[TotalPrice],[EmployeeId]) VALUES ('5','2021-04-01','CreditCard','24.99','5.99','0.00','30.98','2');
+INSERT INTO [dbo].[Transactions] ([TransactionId],[Date],[PaymentMethod],[TotalCost],[TaxAmount],[TotalDiscount],[TotalPrice],[EmployeeId]) VALUES ('4','2021-03-16','Cash','129.99','39.99','9.99','169.98','3');
+INSERT INTO [dbo].[Transactions] ([TransactionId],[Date],[PaymentMethod],[TotalCost],[TaxAmount],[TotalDiscount],[TotalPrice],[EmployeeId]) VALUES ('5','2021-04-01','Cash','24.99','5.99','0.00','30.98','2');
 INSERT INTO [dbo].[Transactions] ([TransactionId],[Date],[PaymentMethod],[TotalCost],[TaxAmount],[TotalDiscount],[TotalPrice],[EmployeeId]) VALUES ('6','2021-04-01','Cash','129.99','29.99','9.99','149.99','1');
 INSERT INTO [dbo].[Transactions] ([TransactionId],[Date],[PaymentMethod],[TotalCost],[TaxAmount],[TotalDiscount],[TotalPrice],[EmployeeId]) VALUES ('7','2021-03-21','Cash','99.99','11.99','2.99','108.99','2');
-INSERT INTO [dbo].[Transactions] ([TransactionId],[Date],[PaymentMethod],[TotalCost],[TaxAmount],[TotalDiscount],[TotalPrice],[EmployeeId]) VALUES ('8','2021-02-11','DebitCard','139.99','16.99','0.00','156.98','1');
+INSERT INTO [dbo].[Transactions] ([TransactionId],[Date],[PaymentMethod],[TotalCost],[TaxAmount],[TotalDiscount],[TotalPrice],[EmployeeId]) VALUES ('8','2021-02-11','Cash','139.99','16.99','0.00','156.98','1');
 INSERT INTO [dbo].[Transactions] ([TransactionId],[Date],[PaymentMethod],[TotalCost],[TaxAmount],[TotalDiscount],[TotalPrice],[EmployeeId]) VALUES ('9','2021-03-16','Cash','199.99','23.99','9.99','213.99','2');
-INSERT INTO [dbo].[Transactions] ([TransactionId],[Date],[PaymentMethod],[TotalCost],[TaxAmount],[TotalDiscount],[TotalPrice],[EmployeeId]) VALUES ('10','2021-02-16','DebitCard','479.99','57.59','24.99','512.59','3');
+INSERT INTO [dbo].[Transactions] ([TransactionId],[Date],[PaymentMethod],[TotalCost],[TaxAmount],[TotalDiscount],[TotalPrice],[EmployeeId]) VALUES ('10','2021-02-16','Cash','479.99','57.59','24.99','512.59','3');
 SET IDENTITY_INSERT [dbo].[Transactions] OFF
 GO
 
