@@ -103,15 +103,15 @@ namespace TheMobileShopCodeFirstFromDB
             List<Transaction> transactionsList = new List<Transaction>()
             {
                 new Transaction {TransactionId = 1, Date = date, PaymentMethod = "Cash", TotalCost = 2300.00, TaxAmount = 480.12, TotalDiscount = 20.00, TotalPrice = 4000.50, Employee = employees[1]},
-                new Transaction {TransactionId = 2, Date = date, PaymentMethod = "CreditCard", TotalCost = 149.99, TaxAmount = 39.99, TotalDiscount = 4.99, TotalPrice = 189.99, Employee = employees[2]},
+                new Transaction {TransactionId = 2, Date = date, PaymentMethod = "Cash", TotalCost = 149.99, TaxAmount = 39.99, TotalDiscount = 4.99, TotalPrice = 189.99, Employee = employees[2]},
                 new Transaction {TransactionId = 3, Date = date, PaymentMethod = "Cash", TotalCost = 29.99, TaxAmount = 4.99, TotalDiscount = 0.00, TotalPrice = 34.98, Employee = employees[3]},
-                new Transaction {TransactionId = 4, Date = date, PaymentMethod = "DebitCard", TotalCost = 129.99, TaxAmount = 39.99, TotalDiscount = 9.99, TotalPrice = 169.98, Employee = employees[3]},
-                new Transaction {TransactionId = 5, Date = date, PaymentMethod = "CreditCard", TotalCost = 24.99, TaxAmount = 5.99, TotalDiscount = 0.00, TotalPrice = 30.98, Employee = employees[2]},
+                new Transaction {TransactionId = 4, Date = date, PaymentMethod = "Cash", TotalCost = 129.99, TaxAmount = 39.99, TotalDiscount = 9.99, TotalPrice = 169.98, Employee = employees[3]},
+                new Transaction {TransactionId = 5, Date = date, PaymentMethod = "Cash", TotalCost = 24.99, TaxAmount = 5.99, TotalDiscount = 0.00, TotalPrice = 30.98, Employee = employees[2]},
                 new Transaction {TransactionId = 6, Date = date, PaymentMethod = "Cash", TotalCost = 129.99, TaxAmount = 29.99, TotalDiscount = 9.99, TotalPrice = 149.99, Employee = employees[1]},
                 new Transaction {TransactionId = 7, Date = date, PaymentMethod = "Cash", TotalCost = 99.99, TaxAmount = 11.99, TotalDiscount = 2.99, TotalPrice = 108.99, Employee = employees[2]},
-                new Transaction {TransactionId = 8, Date = date, PaymentMethod = "DebitCard", TotalCost = 139.99, TaxAmount = 16.99, TotalDiscount = 0.00, TotalPrice = 156.98, Employee = employees[1]},
+                new Transaction {TransactionId = 8, Date = date, PaymentMethod = "Cash", TotalCost = 139.99, TaxAmount = 16.99, TotalDiscount = 0.00, TotalPrice = 156.98, Employee = employees[1]},
                 new Transaction {TransactionId = 9, Date = date, PaymentMethod = "Cash", TotalCost = 199.99, TaxAmount = 23.99, TotalDiscount = 9.99, TotalPrice = 213.99, Employee = employees[2]},
-                new Transaction {TransactionId = 10, Date = date, PaymentMethod = "DebitCard", TotalCost = 479.99, TaxAmount = 57.59, TotalDiscount = 24.99, TotalPrice = 512.59, Employee = employees[3]}
+                new Transaction {TransactionId = 10, Date = date, PaymentMethod = "Cash", TotalCost = 479.99, TaxAmount = 57.59, TotalDiscount = 24.99, TotalPrice = 512.59, Employee = employees[3]}
             };
 
             Dictionary<int, Transaction> transactions = transactionsList.ToDictionary(t => t.TransactionId, t => t);
