@@ -20,8 +20,6 @@ namespace TheMobleShopFormsApp
             InitializeComponent();
             this.Load += TheMobileShopLogin_Load;
 
-            
-
             this.Text = "The Mobile Shop Login";
 
             buttonLogin.Click += ButtonLogin_Click;
@@ -74,14 +72,15 @@ namespace TheMobleShopFormsApp
                 {
                     TheMobileShopMainForm mainForm = new TheMobileShopMainForm();
                     OpenAndHideForm(mainForm);
-               }
-                else
-                   labelLoginError.Text = "Incorrect Employee Code";
+                }
+                else labelLoginError.Text = "Incorrect Employee Code";
             }
 
             //possible disable X
         } 
+        
         public static Employee loggedInEmployee;
+
         public static bool CheckEmployeeCode(String employeeCode)
         {
             TheMobileShopEntities context = new TheMobileShopEntities();
@@ -94,7 +93,6 @@ namespace TheMobleShopFormsApp
                 loggedInEmployee = employee;
                 return true;
             }
-                
             else
                 return false;
         }
