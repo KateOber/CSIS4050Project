@@ -22,3 +22,15 @@ C:\Users\Kate\Documents\GitHub\backup\The Mobile Shop\TheMobileShopCodeFirstFrom
 C:\Users\Kate\Documents\GitHub\backup\The Mobile Shop\TheMobileShopCodeFirstFromDB\obj\Debug\TheMobileShopCodeFirstFromDB.csproj.CopyComplete
 C:\Users\Kate\Documents\GitHub\backup\The Mobile Shop\TheMobileShopCodeFirstFromDB\obj\Debug\TheMobileShopCodeFirstFromDB.dll
 C:\Users\Kate\Documents\GitHub\backup\The Mobile Shop\TheMobileShopCodeFirstFromDB\obj\Debug\TheMobileShopCodeFirstFromDB.pdb
+C:\Users\webdev1\Documents\DevSudheer\Pers\sem4\BusOps\project\CSIS4050Project\The Mobile Shop\TheMobileShopCodeFirstFromDB\bin\Debug\TheMobileShopCodeFirstFromDB.dll.config
+C:\Users\webdev1\Documents\DevSudheer\Pers\sem4\BusOps\project\CSIS4050Project\The Mobile Shop\TheMobileShopCodeFirstFromDB\bin\Debug\TheMobileShopCodeFirstFromDB.dll
+C:\Users\webdev1\Documents\DevSudheer\Pers\sem4\BusOps\project\CSIS4050Project\The Mobile Shop\TheMobileShopCodeFirstFromDB\bin\Debug\TheMobileShopCodeFirstFromDB.pdb
+C:\Users\webdev1\Documents\DevSudheer\Pers\sem4\BusOps\project\CSIS4050Project\The Mobile Shop\TheMobileShopCodeFirstFromDB\bin\Debug\EntityFramework.dll
+C:\Users\webdev1\Documents\DevSudheer\Pers\sem4\BusOps\project\CSIS4050Project\The Mobile Shop\TheMobileShopCodeFirstFromDB\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\webdev1\Documents\DevSudheer\Pers\sem4\BusOps\project\CSIS4050Project\The Mobile Shop\TheMobileShopCodeFirstFromDB\bin\Debug\EntityFramework.xml
+C:\Users\webdev1\Documents\DevSudheer\Pers\sem4\BusOps\project\CSIS4050Project\The Mobile Shop\TheMobileShopCodeFirstFromDB\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\webdev1\Documents\DevSudheer\Pers\sem4\BusOps\project\CSIS4050Project\The Mobile Shop\TheMobileShopCodeFirstFromDB\obj\Debug\TheMobileShopCodeFirstFromDB.csprojAssemblyReference.cache
+C:\Users\webdev1\Documents\DevSudheer\Pers\sem4\BusOps\project\CSIS4050Project\The Mobile Shop\TheMobileShopCodeFirstFromDB\obj\Debug\TheMobileShopCodeFirstFromDB.csproj.CoreCompileInputs.cache
+C:\Users\webdev1\Documents\DevSudheer\Pers\sem4\BusOps\project\CSIS4050Project\The Mobile Shop\TheMobileShopCodeFirstFromDB\obj\Debug\TheMobileShopCodeFirstFromDB.csproj.CopyComplete
+C:\Users\webdev1\Documents\DevSudheer\Pers\sem4\BusOps\project\CSIS4050Project\The Mobile Shop\TheMobileShopCodeFirstFromDB\obj\Debug\TheMobileShopCodeFirstFromDB.dll
+C:\Users\webdev1\Documents\DevSudheer\Pers\sem4\BusOps\project\CSIS4050Project\The Mobile Shop\TheMobileShopCodeFirstFromDB\obj\Debug\TheMobileShopCodeFirstFromDB.pdb

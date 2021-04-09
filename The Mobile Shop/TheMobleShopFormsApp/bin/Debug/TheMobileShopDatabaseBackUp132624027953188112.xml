@@ -1,0 +1,351 @@
+<?xml version="1.0" standalone="yes"?>
+<TheMobileShopDatabaseBackUp132624027953188112>
+  <xs:schema id="TheMobileShopDatabaseBackUp132624027953188112" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="TheMobileShopDatabaseBackUp132624027953188112" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="Employees">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="EmployeeId" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+                <xs:element name="EmployeeCode">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="7" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="FirstName">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="50" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="LastName">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="50" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="PhoneNumber" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="15" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="Email" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="50" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="IsAdmin" type="xs:unsignedByte" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="Categories">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="CategoryId" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+                <xs:element name="CategoryCode">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="10" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="CategoryName">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="50" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="Inventory">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="ProductId" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+                <xs:element name="Name">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="50" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="Description" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="250" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="Quantity" type="xs:int" />
+                <xs:element name="CategoryId" type="xs:int" />
+                <xs:element name="Brand" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="50" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="Cost" type="xs:double" />
+                <xs:element name="Price" type="xs:double" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="Transactions">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="TransactionId" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+                <xs:element name="Date" type="xs:dateTime" />
+                <xs:element name="PaymentMethod" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="20" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="TotalCost" type="xs:double" />
+                <xs:element name="TaxAmount" type="xs:double" />
+                <xs:element name="TotalDiscount" type="xs:double" minOccurs="0" />
+                <xs:element name="TotalPrice" type="xs:double" />
+                <xs:element name="EmployeeId" type="xs:int" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="TransactionProducts">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="TransactionId" type="xs:int" />
+                <xs:element name="ProductId" type="xs:int" />
+                <xs:element name="Quantity" type="xs:int" />
+                <xs:element name="Discount" type="xs:double" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//Employees" />
+        <xs:field xpath="EmployeeId" />
+      </xs:unique>
+      <xs:unique name="Categories_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//Categories" />
+        <xs:field xpath="CategoryId" />
+      </xs:unique>
+      <xs:unique name="Inventory_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//Inventory" />
+        <xs:field xpath="ProductId" />
+      </xs:unique>
+      <xs:unique name="Transactions_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//Transactions" />
+        <xs:field xpath="TransactionId" />
+      </xs:unique>
+      <xs:unique name="TransactionProducts_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//TransactionProducts" />
+        <xs:field xpath="TransactionId" />
+        <xs:field xpath="ProductId" />
+      </xs:unique>
+    </xs:element>
+  </xs:schema>
+  <Employees>
+    <EmployeeId>1</EmployeeId>
+    <EmployeeCode>ADM-001</EmployeeCode>
+    <FirstName>Kate</FirstName>
+    <LastName>Obertas</LastName>
+    <PhoneNumber>2362868281</PhoneNumber>
+    <Email>kate@gmail.ca</Email>
+    <IsAdmin>1</IsAdmin>
+  </Employees>
+  <Employees>
+    <EmployeeId>2</EmployeeId>
+    <EmployeeCode>ADM-002</EmployeeCode>
+    <FirstName>Indu Priya</FirstName>
+    <LastName>Addepalli</LastName>
+    <PhoneNumber>1234567891</PhoneNumber>
+    <Email>indupriyaaddepalli@student.douglas.ca</Email>
+    <IsAdmin>1</IsAdmin>
+  </Employees>
+  <Employees>
+    <EmployeeId>3</EmployeeId>
+    <EmployeeCode>ADM-003</EmployeeCode>
+    <FirstName>Naga Sudheer</FirstName>
+    <LastName>Bolla</LastName>
+    <PhoneNumber>1234567892</PhoneNumber>
+    <Email>sudheerbolla@student.douglas.ca</Email>
+    <IsAdmin>1</IsAdmin>
+  </Employees>
+  <Employees>
+    <EmployeeId>4</EmployeeId>
+    <EmployeeCode>EMP-001</EmployeeCode>
+    <FirstName>Paul</FirstName>
+    <LastName>Allen</LastName>
+    <PhoneNumber>7784567893</PhoneNumber>
+    <Email>pallen@outlook.com</Email>
+    <IsAdmin>0</IsAdmin>
+  </Employees>
+  <Employees>
+    <EmployeeId>5</EmployeeId>
+    <EmployeeCode>EMP-002</EmployeeCode>
+    <FirstName>Linus</FirstName>
+    <LastName>Torvalds</LastName>
+    <PhoneNumber>6721233467</PhoneNumber>
+    <Email>linux@yahoo.com</Email>
+    <IsAdmin>0</IsAdmin>
+  </Employees>
+  <Categories>
+    <CategoryId>1</CategoryId>
+    <CategoryCode>SP</CategoryCode>
+    <CategoryName>Smartphone</CategoryName>
+  </Categories>
+  <Categories>
+    <CategoryId>2</CategoryId>
+    <CategoryCode>TA</CategoryCode>
+    <CategoryName>Tablet</CategoryName>
+  </Categories>
+  <Categories>
+    <CategoryId>3</CategoryId>
+    <CategoryCode>AC</CategoryCode>
+    <CategoryName>Accessory</CategoryName>
+  </Categories>
+  <Categories>
+    <CategoryId>4</CategoryId>
+    <CategoryCode>CP</CategoryCode>
+    <CategoryName>Cell Phone</CategoryName>
+  </Categories>
+  <Inventory>
+    <ProductId>1</ProductId>
+    <Name>Galaxy A11 32GB</Name>
+    <Description>Samsung Galaxy A11 smartphone. Its 6.4" Infinity-O display with large HD+ screen. The triple-camera setup. Its long-lasting lithium-ion battery allows you to use your phone for extended hours without needing to recharge.</Description>
+    <Quantity>15</Quantity>
+    <CategoryId>1</CategoryId>
+    <Brand>Samsung</Brand>
+    <Cost>184.55</Cost>
+    <Price>409.99</Price>
+  </Inventory>
+  <Inventory>
+    <ProductId>2</ProductId>
+    <Name>iPhone 12 Pro Max</Name>
+    <Description>5.8-inch Super Retina XDR OLED display Water and dust resistant (4 meters for up to 30 minutes, IP68) Triple-camera system with 12MP Ultra Wide, Wide, and Telephoto cameras; Night mode, Portrait mode, and 4K video up to 60fp</Description>
+    <Quantity>10</Quantity>
+    <CategoryId>1</CategoryId>
+    <Brand>Apple</Brand>
+    <Cost>1000</Cost>
+    <Price>1599.99</Price>
+  </Inventory>
+  <Inventory>
+    <ProductId>3</ProductId>
+    <Name>Pixel 5</Name>
+    <Description>Dimensions 6in (H) x 2.77in (W) x 0.31in (D) Weight 5.33 ounces Operating System Android Display and User Interface: Display Size 6 Display Technology N/A Pixel Density 432 PPI</Description>
+    <Quantity>8</Quantity>
+    <CategoryId>1</CategoryId>
+    <Brand>Google</Brand>
+    <Cost>800</Cost>
+    <Price>1399.99</Price>
+  </Inventory>
+  <Inventory>
+    <ProductId>4</ProductId>
+    <Name>Nokia 3310 2G</Name>
+    <Description>Nokia 3310 2G Feature Phone Dual SIM 2.4inch Color Screen BT 1500mAh 64MB 2MP Camera FM MP3 With LED Flashlight GSM Cell Phone</Description>
+    <Quantity>10</Quantity>
+    <CategoryId>4</CategoryId>
+    <Brand>Nokia</Brand>
+    <Cost>10</Cost>
+    <Price>25.66</Price>
+  </Inventory>
+  <Inventory>
+    <ProductId>5</ProductId>
+    <Name>Galaxy Tab A 8" 32GB</Name>
+    <Description>Galaxy Tab A 8" 32GB','Samsung Galaxy Tab A 8" 32GB Android Tablet with Quad-Core Processor - Black</Description>
+    <Quantity>5</Quantity>
+    <CategoryId>2</CategoryId>
+    <Brand>Samsung</Brand>
+    <Cost>80</Cost>
+    <Price>199.99</Price>
+  </Inventory>
+  <Inventory>
+    <ProductId>6</ProductId>
+    <Name>iPad Pro (12.9-inch, Wi-Fi, 128GB)</Name>
+    <Description>iPad Pro (12.9-inch, Wi-Fi, 128GB)','Apple iPad Pro (12.9-inch, Wi-Fi, 128GB) - Space Grey 12.9-inch edge-to-edge Liquid Retina display with ProMotion, True Tone and P3 wide colour</Description>
+    <Quantity>6</Quantity>
+    <CategoryId>2</CategoryId>
+    <Brand>Apple</Brand>
+    <Cost>900</Cost>
+    <Price>1299.98</Price>
+  </Inventory>
+  <Inventory>
+    <ProductId>7</ProductId>
+    <Name>Leather Cover for Galaxy S20</Name>
+    <Description>Leather Cover for Galaxy S20','Give your phone an elegant look and feel with this premium European leather cover. Its refined aluminum buttons add style and a distinct sense of luxury. With a soft grip and slim design.</Description>
+    <Quantity>3</Quantity>
+    <CategoryId>3</CategoryId>
+    <Brand>Samsung</Brand>
+    <Cost>10</Cost>
+    <Price>35</Price>
+  </Inventory>
+  <Inventory>
+    <ProductId>8</ProductId>
+    <Name>5W USB Power Adapter</Name>
+    <Description>5W USB Power Adapter','Featuring an ultracompact design, this power adapter offers fast, efficient charging at home, in the office or on the go. It works with any Apple Watch, iPhone or iPod model.</Description>
+    <Quantity>30</Quantity>
+    <CategoryId>3</CategoryId>
+    <Brand>Apple</Brand>
+    <Cost>5</Cost>
+    <Price>23.98</Price>
+  </Inventory>
+  <Inventory>
+    <ProductId>9</ProductId>
+    <Name>TUNE 120TWS Headphones</Name>
+    <Description>TUNE 120TWS Headphones','Truly Wireless Headphones. They are powerful in sound thanks to a 5.8mm driver featuring JBL Pure Bass sound and colorful in design.</Description>
+    <Quantity>3</Quantity>
+    <CategoryId>3</CategoryId>
+    <Brand>JBL</Brand>
+    <Cost>40</Cost>
+    <Price>99.98</Price>
+  </Inventory>
+  <Inventory>
+    <ProductId>10</ProductId>
+    <Name>Moto G8 Power Lite XT2055-2 64GB 4GB</Name>
+    <Description>Moto G8 Power Lite XT2055-2 64GB 4GB','Motorola Moto G8 Power Lite XT2055-2 64GB 4GB - Dual Sim - Brand New Unlocked - Arctic Blue</Description>
+    <Quantity>5</Quantity>
+    <CategoryId>4</CategoryId>
+    <Brand>Motorola</Brand>
+    <Cost>100</Cost>
+    <Price>249.99</Price>
+  </Inventory>
+  <Transactions>
+    <TransactionId>1</TransactionId>
+    <Date>2021-04-03T00:00:00-07:00</Date>
+    <PaymentMethod>Cash</PaymentMethod>
+    <TotalCost>2300</TotalCost>
+    <TaxAmount>480.12</TaxAmount>
+    <TotalDiscount>20</TotalDiscount>
+    <TotalPrice>4000.5</TotalPrice>
+    <EmployeeId>1</EmployeeId>
+  </Transactions>
+  <TransactionProducts>
+    <TransactionId>1</TransactionId>
+    <ProductId>1</ProductId>
+    <Quantity>1</Quantity>
+    <Discount>0</Discount>
+  </TransactionProducts>
+  <TransactionProducts>
+    <TransactionId>1</TransactionId>
+    <ProductId>2</ProductId>
+    <Quantity>2</Quantity>
+    <Discount>20</Discount>
+  </TransactionProducts>
+  <TransactionProducts>
+    <TransactionId>1</TransactionId>
+    <ProductId>3</ProductId>
+    <Quantity>1</Quantity>
+    <Discount>0</Discount>
+  </TransactionProducts>
+</TheMobileShopDatabaseBackUp132624027953188112>
