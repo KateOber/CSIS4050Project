@@ -12,6 +12,7 @@ Post-Deployment Script Template
 USE[TheMobileShopDB]
 GO
 
+/*Inserting data into employee table*/
 SET IDENTITY_INSERT [dbo].[Employees] ON
 INSERT INTO [dbo].[Employees] ([EmployeeId], [EmployeeCode], [FirstName], [LastName], [PhoneNumber], [Email], [IsAdmin]) VALUES (1,'ADM-001','Kate','Obertas','2362868281','kate@gmail.ca',1) 
 INSERT INTO [dbo].[Employees] ([EmployeeId], [EmployeeCode], [FirstName], [LastName], [PhoneNumber], [Email], [IsAdmin]) VALUES (2,'ADM-002','Indu Priya','Addepalli','1234567891','indupriyaaddepalli@student.douglas.ca',1);
@@ -21,6 +22,7 @@ INSERT INTO [dbo].[Employees] ([EmployeeId], [EmployeeCode], [FirstName], [LastN
 SET IDENTITY_INSERT [dbo].[Employees] OFF
 GO
 
+/*Inserting data into category table*/
 SET IDENTITY_INSERT [dbo].[Categories] ON
 INSERT INTO [dbo].[Categories] ([CategoryId],[CategoryCode],[CategoryName]) VALUES ('1','SP','Smartphone');
 INSERT INTO [dbo].[Categories] ([CategoryId],[CategoryCode],[CategoryName]) VALUES ('2','TA','Tablet');
@@ -29,6 +31,7 @@ INSERT INTO [dbo].[Categories] ([CategoryId],[CategoryCode],[CategoryName]) VALU
 SET IDENTITY_INSERT [dbo].[Categories] OFF
 GO
 
+/*Inserting data into Inventory table*/
 SET IDENTITY_INSERT [dbo].[Inventory] ON
 INSERT INTO [dbo].[Inventory] ([ProductId],[Name],[Description],[Quantity],[CategoryId],[Brand],[Cost],[Price]) VALUES ('1','Galaxy A11 32GB','Samsung Galaxy A11 smartphone. Its 6.4\" Infinity-O display with large HD+ screen. The triple-camera setup. Its long-lasting lithium-ion battery allows you to use your phone for extended hours without needing to recharge.','15','1','Samsung','184.55','409.99');
 INSERT INTO [dbo].[Inventory] ([ProductId],[Name],[Description],[Quantity],[CategoryId],[Brand],[Cost],[Price]) VALUES ('2','iPhone 12 Pro Max','5.8-inch Super Retina XDR OLED display Water and dust resistant (4 meters for up to 30 minutes, IP68) Triple-camera system with 12MP Ultra Wide, Wide, and Telephoto cameras; Night mode, Portrait mode, and 4K video up to 60fp','10','1','Apple','1000.00','1599.99');
@@ -58,6 +61,7 @@ INSERT INTO [dbo].[Inventory] ([ProductId],[Name],[Description],[Quantity],[Cate
 SET IDENTITY_INSERT [dbo].[Inventory] OFF
 GO
 
+/*Inserting data into transactions table*/
 SET IDENTITY_INSERT [dbo].[Transactions] ON
 INSERT INTO [dbo].[Transactions] ([TransactionId],[Date],[PaymentMethod],[TotalCost],[TaxAmount],[TotalDiscount],[TotalPrice],[EmployeeId]) VALUES ('1','2021-04-03','Cash','2300.00','480.12','20.00','4000.50','1');
 INSERT INTO [dbo].[Transactions] ([TransactionId],[Date],[PaymentMethod],[TotalCost],[TaxAmount],[TotalDiscount],[TotalPrice],[EmployeeId]) VALUES ('2','2021-02-12','Cash','149.99','39.99','4.99','189.99','2');
@@ -72,6 +76,7 @@ INSERT INTO [dbo].[Transactions] ([TransactionId],[Date],[PaymentMethod],[TotalC
 SET IDENTITY_INSERT [dbo].[Transactions] OFF
 GO
 
+/*Inserting data into TransctionProducts table*/
 INSERT INTO [dbo].[TransactionProducts] ([TransactionId],[ProductId],[Quantity],[Discount]) VALUES ('1','1','1','20.00');
 INSERT INTO [dbo].[TransactionProducts] ([TransactionId],[ProductId],[Quantity],[Discount]) VALUES ('2','2','2','4.99');
 INSERT INTO [dbo].[TransactionProducts] ([TransactionId],[ProductId],[Quantity],[Discount]) VALUES ('3','3','1','0.00');
