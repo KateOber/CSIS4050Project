@@ -14,20 +14,20 @@ namespace TheMobleShopFormsApp
 {
     public partial class TheMobileShopCheckout : Form
     {
-        public TheMobileShopCheckout()
+        public TheMobileShopCheckout(List<TransactionProduct> addedItemList)
         {
             InitializeComponent();
 
-            this.Load += TheMobileShopCheckout_Load;
+            this.Load += (s,e) => TheMobileShopCheckout_Load(addedItemList);
             this.Text = "The Mobile Shop Checkout";
             buttonBack.Click += ButtonBack_Click;
         }
 
-        private void TheMobileShopCheckout_Load(object sender, EventArgs e)
+        private void TheMobileShopCheckout_Load(List<TransactionProduct> recentTransactions)
         {
-            InitializeDataGridView(dataGridViewItems);
+            InitializeDataGridView(dataGridViewItems, recentTransactions);
         }
-        private void InitializeDataGridView(DataGridView dataGridView)
+        private void InitializeDataGridView(DataGridView dataGridView, List<TransactionProduct> recentTransactions)
         {
             // Allow users to add/delete rows, and fill out columns to the entire width of the control
             dataGridView.AllowUserToAddRows = false;
@@ -56,11 +56,9 @@ namespace TheMobleShopFormsApp
             // unit-of-work context
             using (TheMobileShopEntities context = new TheMobileShopEntities())
             {
-
-                Transaction recentTransaction = context.Transactions.Find(1);
-                TransactionProduct item = context.TransactionProducts.Find(recentTransaction);
                 // loop through 
-               
+                foreach (TransactionProduct item in recentTransactions)
+                {
                     string[] rowAdd =
                     {
                         item.Transaction.TransactionId.ToString(),
@@ -69,10 +67,10 @@ namespace TheMobleShopFormsApp
                         item.Inventory.Name,
                         item.Quantity.ToString(),
                         item.Discount.ToString(),
-                        item.Transaction.Employee.FirstName.ToString()
+                        item.Transaction.EmployeeId.ToString()
                      };
                     dataGridView.Rows.Add(rowAdd);
-                
+                }
             }
         }
 

@@ -57,3 +57,8 @@ C:\Users\Kate\Documents\GitHub\backup\The Mobile Shop\TheMobleShopFormsApp\bin\D
 C:\Users\Kate\Documents\GitHub\backup\The Mobile Shop\TheMobleShopFormsApp\bin\Debug\TheMobileShopValidation.dll
 C:\Users\Kate\Documents\GitHub\backup\The Mobile Shop\TheMobleShopFormsApp\bin\Debug\TheMobileShopValidation.pdb
 C:\Users\Kate\Documents\GitHub\backup\The Mobile Shop\TheMobleShopFormsApp\bin\Debug\TheMobileShopValidation.dll.config
+C:\Users\Kate\Documents\GitHub\CSIS4050Project\The Mobile Shop\TheMobleShopFormsApp\bin\Debug\DataTableAccessLayer.dll
+C:\Users\Kate\Documents\GitHub\CSIS4050Project\The Mobile Shop\TheMobleShopFormsApp\bin\Debug\TheMobileShopValidation.dll
+C:\Users\Kate\Documents\GitHub\CSIS4050Project\The Mobile Shop\TheMobleShopFormsApp\bin\Debug\DataTableAccessLayer.pdb
+C:\Users\Kate\Documents\GitHub\CSIS4050Project\The Mobile Shop\TheMobleShopFormsApp\bin\Debug\TheMobileShopValidation.pdb
+C:\Users\Kate\Documents\GitHub\CSIS4050Project\The Mobile Shop\TheMobleShopFormsApp\bin\Debug\TheMobileShopValidation.dll.config
