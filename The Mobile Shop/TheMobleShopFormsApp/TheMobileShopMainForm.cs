@@ -42,24 +42,51 @@ namespace TheMobleShopFormsApp
             buttonPurchaseHistory.Click += ButtonPurchaseHistory_Click;
             buttonReset.Click += ButtonReset_Click;
             buttonRemoveItem.Click += ButtonRemoveItem_Click;
+            dataGridViewCart.CellEndEdit += DataGridViewCart_CellEndEdit;
 
+
+        }
+
+        private void DataGridViewCart_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            DiscountEdit(dataGridViewCart);
         }
 
         private void ButtonRemoveItem_Click(object sender, EventArgs e)
         {
             if (dataGridViewCart.SelectedRows.Count >= 1)
             {
-               
-                    if (dataGridViewCart.SelectedCells.Count > 0)
-                    {
-                        string idtest = dataGridViewCart.SelectedCells[0].Value.ToString();
-                        Debug.WriteLine("CELL VALUE FROM DATAGRIDDDDDDD "+idtest);
-                        
-                    }
-                
-            }
+                foreach (DataGridViewRow row in dataGridViewCart.SelectedRows)
+                {
+                    int idtest = Int32.Parse(row.Cells[0].Value.ToString());
+                    int idtest2 = Int32.Parse(row.Cells[4].Value.ToString());
 
-                
+                    using (TheMobileShopEntities context = new TheMobileShopEntities())
+                    {
+                        //find the item in the Database (context)
+                        Inventory itemFromContext = context.Inventories.Find(idtest);
+
+                        for (int x = 0; x < cart.Count; x++)
+                        {
+                            //item already in cart so increase quantity by 1 and set up flag
+                            if (itemFromContext.ProductId == cart[x].Inventory.ProductId)
+                            {
+                                if (cart[x].quantity > 1)
+                                    cart[x].quantity--;
+                                else
+                                    cart.RemoveAt(x);
+                            }
+                        }
+                        itemFromContext.Quantity++;
+                        context.SaveChanges();
+
+
+                        //reload Cart and Inventory DataGridView
+                        ReloadDataGridView(context);
+                    }
+
+                }
+            }   
         }
 
         /// <summary>
@@ -176,7 +203,7 @@ namespace TheMobleShopFormsApp
                             //if cart is empty add found item and set quantity as 1
                             if (cart.Count == 0)
                             {
-                                cart.Add(new ItemQuantity { Inventory = itemFromContext, quantity = 1 });
+                                cart.Add(new ItemQuantity { Inventory = itemFromContext, quantity = 1, discount =0 });
                             }
                             //if cart not empty check if found item already in cart
                             else
@@ -193,7 +220,7 @@ namespace TheMobleShopFormsApp
                                 }
                                 if (!itemAlreadyInCart)
                                 {
-                                    cart.Add(new ItemQuantity { Inventory = itemFromContext, quantity = 1 });
+                                    cart.Add(new ItemQuantity { Inventory = itemFromContext, quantity = 1, discount = 0 });
                                 }
                             }
                             //Subtract item quantity from inventory and save context
@@ -412,7 +439,6 @@ namespace TheMobleShopFormsApp
 
             dataGridView.Columns.AddRange(dataGridColumns);
 
-            // unit-of-work context
 
             // set all properties
             dataGridView.AllowUserToAddRows = false;
@@ -421,7 +447,47 @@ namespace TheMobleShopFormsApp
             dataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
-        private void ReloadDataGridView(TheMobileShopEntities context)
+
+        private void DiscountEdit(DataGridView dataGridView)
+        {
+            TheMobileShopEntities context = new TheMobileShopEntities();
+            foreach (DataGridViewRow row in dataGridView.Rows)
+            {
+                double idtest2 = Double.Parse(row.Cells[6].Value.ToString());
+                int idtest = Int32.Parse(row.Cells[0].Value.ToString());
+                for (int x = 0; x < cart.Count; x++)
+                {
+                    if(cart[x].Inventory.ProductId == idtest)
+                    {
+                        cart[x].discount = idtest2;
+                        
+                    }
+                }
+            }
+            ReloadDataGridView(context);
+            //if (dataGridView.SelectedCells.Value.ToString() == "6")
+            //{
+            //    MessageBox.Show("succ");
+            //    //foreach (DataGridViewRow row in dataGridViewCart.SelectedRows)
+            //    //{
+            //    //    int idtest = Int32.Parse(row.Cells[0].Value.ToString());
+            //    //    int idtest2 = Int32.Parse(row.Cells[4].Value.ToString());
+
+            //    //    using (TheMobileShopEntities context = new TheMobileShopEntities())
+            //    //    {
+            //    //        //find the item in the Database (context)
+            //    //        Inventory itemFromContext = context.Inventories.Find(idtest);
+
+            //    //        for (int x = 0; x < cart.Count; x++)
+            //    //        {
+
+            //    //        }
+            //    //    }
+            //    //}
+            //}
+        }
+
+            private void ReloadDataGridView(TheMobileShopEntities context)
         {
             // clear all rows
             dataGridViewInventory.Rows.Clear();
@@ -432,9 +498,12 @@ namespace TheMobleShopFormsApp
             dataGridViewInventory.DataSource = Controller<TheMobileShopEntities, Inventory>.SetBindingList();
             dataGridViewInventory.Refresh();
 
+            dataGridViewCart.CellEndEdit -= DataGridViewCart_CellEndEdit;
 
             dataGridViewCart.Rows.Clear();
+
             double subTotal = 0;
+            double discout = 0;
 
             /* foreach (ItemQuantity item in cart)
              {
@@ -449,20 +518,22 @@ namespace TheMobleShopFormsApp
             for (int x = 0; x < cart.Count; x++)
             {
                 string[] addRow = { cart[x].Inventory.ProductId.ToString(), cart[x].Inventory.Name, cart[x].Inventory.Category.CategoryName,
-                    cart[x].Inventory.Brand, cart[x].quantity.ToString(), cart[x].Inventory.Price.ToString(), "" };
+                    cart[x].Inventory.Brand, cart[x].quantity.ToString(), cart[x].Inventory.Price.ToString(), cart[x].discount.ToString() };
                 dataGridViewCart.Rows.Add(addRow);
 
                 subTotal += cart[x].Inventory.Price * cart[x].quantity;
+                discout += cart[x].discount * cart[x].quantity;
 
             }
 
-            tax = subTotal * 0.12;
-            total = subTotal + tax;
+            tax = subTotal  * 0.12;
+            total = (subTotal- discout) + tax;
 
             labelSubTotalAmount.Text = subTotal.ToString("C");
             labelTaxAmount.Text = tax.ToString("C");
             labelTotal.Text = total.ToString("C");
-
+            labelDiscountAmount.Text = "- $ "+discout.ToString("n2");
+            dataGridViewCart.CellEndEdit += DataGridViewCart_CellEndEdit;
 
         }
         /// <summary>
@@ -499,5 +570,7 @@ namespace TheMobleShopFormsApp
     {
         public Inventory Inventory { get; set; }
         public int quantity { get; set; }
+
+        public double discount { get; set; }
     }
 }
