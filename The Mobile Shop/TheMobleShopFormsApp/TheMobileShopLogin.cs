@@ -21,20 +21,37 @@ namespace TheMobleShopFormsApp
         public TheMobileShopLogin()
         {
             InitializeComponent();
-            this.Load += TheMobileShopLogin_Load;
 
             this.Text = "The Mobile Shop Login";
 
+            //setup button event handlers 
             buttonLogin.Click += ButtonLogin_Click;
             buttonAdmin.Click += (s,e) => GetEmployeeCode("admin");
             buttonRegular.Click += (s, e) => GetEmployeeCode("reg");
+            buttonSeedDatabase.Click += ButtonSeedDatabase_Click;
         }
-	
-	//Login button is disabled until the database is loaded by the seed database button
-        private void TheMobileShopLogin_Load(object sender, EventArgs e)
+
+        /// <summary>
+        /// the seedDatabase button will load the data into the database and then the login button is enabled.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void ButtonSeedDatabase_Click(object sender, EventArgs e)
         {
             buttonLogin.Enabled = false;
+
+            using (TheMobileShopEntities context = new TheMobileShopEntities())
+            {
+                context.SeedDatabase();
+            }
+
+            buttonLogin.Enabled = true;
         }
+
+        /// <summary>
+        /// Sets up employee code with admin or regular privilege 
+        /// </summary>
+        /// <param name="role"></param>
         public void GetEmployeeCode(string role)
         {
             if (role == "admin")
@@ -58,22 +75,29 @@ namespace TheMobleShopFormsApp
             }
 
         }
-        //The following will check for the employee code textbox if not entered it will generate an error message
-        //and it also checks for the valid employee code
 
+        /// <summary>
+        /// checks for the employee code textbox if not entered or not valid
+        /// error message will be generated
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ButtonLogin_Click(object sender, EventArgs e)
         {
-            String employeeCode = textBoxEmployeeCode.Text.Trim().ToUpper();
+            //get the epmloyee code
+            string employeeCode = textBoxEmployeeCode.Text.Trim().ToUpper();
+            //check if empty
             if (employeeCode == "")
             {
                 textBoxEmployeeCode.BackColor = Color.Red;
                 labelLoginError.Text = "Please Enter Employee Code";
             }
+            //check if valid
             else
             {
                 textBoxEmployeeCode.BackColor = Color.White;
                 labelLoginError.Text = "";
-
+                //open main form if valid
                 if (CheckEmployeeCode(employeeCode))
                 {
                     TheMobileShopMainForm mainForm = new TheMobileShopMainForm();
@@ -81,12 +105,15 @@ namespace TheMobleShopFormsApp
                 }
                 else labelLoginError.Text = "Incorrect Employee Code";
             }
-
-            //possible disable X
         } 
         
         public static Employee loggedInEmployee;
 
+        /// <summary>
+        /// Check entered employee's code in the Database
+        /// </summary>
+        /// <param name="employeeCode"></param>
+        /// <returns></returns>
         public static bool CheckEmployeeCode(String employeeCode)
         {
             TheMobileShopEntities context = new TheMobileShopEntities();
@@ -102,15 +129,6 @@ namespace TheMobleShopFormsApp
             else
                 return false;
         }
-        //the seedDatabase button will load the data into the database and then the login button is enabled.
-        private void buttonSeedDatabase_Click(object sender, EventArgs e)
-		{
-            using (TheMobileShopEntities context = new TheMobileShopEntities())
-            {
-                context.SeedDatabase();
-            }
-            
-            buttonLogin.Enabled = true;
-        }
+
     }
 }

@@ -117,7 +117,7 @@ namespace TheMobleShopFormsApp
             double tax = subTotal * 0.12;
             double? total = subTotal + tax - totalDiscount;
             labelSubTotal.Text = subTotal.ToString("C");
-            labelDiscount.Text = "$ " + Convert.ToString(totalDiscount);
+            labelDiscount.Text = "- $ " + Convert.ToString(totalDiscount);
             labelTotalNoOfItems.Text = totalQty + " Items";
             labelTax.Text = tax.ToString("C");
             labelTotal.Text = total.HasValue ? total.Value.ToString("C") : "$ 0.0";

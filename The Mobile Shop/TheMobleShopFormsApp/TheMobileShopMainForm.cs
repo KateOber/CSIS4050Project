@@ -329,7 +329,7 @@ namespace TheMobleShopFormsApp
                 }
                 if (catId != 0)
                 {
-                    if (Int32.Parse(inventoryList[x].CategoryId) != catId)
+                    if (inventoryList[x].CategoryId != catId)
                         inventoryList.Remove(inventoryList[x]);
                 }
                 if (priceMin != 0)

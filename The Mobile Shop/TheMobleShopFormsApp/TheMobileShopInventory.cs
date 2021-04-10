@@ -58,7 +58,7 @@ namespace TheMobleShopFormsApp
             for (int i = 0; i < listBoxCategory.Items.Count; i++)
             {
                 //null check!
-                if (Int32.Parse(item.CategoryId) == (listBoxCategory.Items[i] as Category)?.CategoryId)
+                if (item.CategoryId == (listBoxCategory.Items[i] as Category)?.CategoryId)
                 {
                     listBoxCategory.SetSelected(i, true);
                 }

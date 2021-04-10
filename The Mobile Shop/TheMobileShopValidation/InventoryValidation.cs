@@ -18,7 +18,7 @@ namespace TheMobileShopValidation
         {
             using (TheMobileShopEntities context = new TheMobileShopEntities())
             {
-                return context.Categories.Any(c => c.CategoryId == Int32.Parse(inventory.CategoryId));
+                return context.Categories.Any(c => c.CategoryId == inventory.CategoryId);
             }
         }
     }

@@ -80,5 +80,4 @@ namespace TheMobleShopFormsApp
     }
 }
 
-//(item.Discount is null) ? "0.0" : item.Discount..Value.ToString("C"),
                         

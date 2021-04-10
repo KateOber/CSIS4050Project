@@ -37,9 +37,9 @@ namespace TheMobleShopFormsApp
             this.label2 = new System.Windows.Forms.Label();
             this.labelLoginError = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.buttonSeedDatabase = new System.Windows.Forms.Button();
             this.buttonRegular = new System.Windows.Forms.Button();
             this.buttonAdmin = new System.Windows.Forms.Button();
-            this.buttonSeedDatabase = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -123,19 +123,28 @@ namespace TheMobleShopFormsApp
             this.groupBox1.Controls.Add(this.buttonSeedDatabase);
             this.groupBox1.Controls.Add(this.buttonRegular);
             this.groupBox1.Controls.Add(this.buttonAdmin);
-            this.groupBox1.Location = new System.Drawing.Point(344, 455);
+            this.groupBox1.Location = new System.Drawing.Point(283, 449);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(248, 101);
+            this.groupBox1.Size = new System.Drawing.Size(382, 101);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Easy Access";
+            this.groupBox1.Text = "Easy Access (Demo)";
+            // 
+            // buttonSeedDatabase
+            // 
+            this.buttonSeedDatabase.Location = new System.Drawing.Point(255, 37);
+            this.buttonSeedDatabase.Name = "buttonSeedDatabase";
+            this.buttonSeedDatabase.Size = new System.Drawing.Size(110, 52);
+            this.buttonSeedDatabase.TabIndex = 1;
+            this.buttonSeedDatabase.Text = "Seed Database";
+            this.buttonSeedDatabase.UseVisualStyleBackColor = true;
             // 
             // buttonRegular
             // 
             this.buttonRegular.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonRegular.Location = new System.Drawing.Point(134, 37);
+            this.buttonRegular.Location = new System.Drawing.Point(140, 37);
             this.buttonRegular.Name = "buttonRegular";
-            this.buttonRegular.Size = new System.Drawing.Size(97, 40);
+            this.buttonRegular.Size = new System.Drawing.Size(103, 52);
             this.buttonRegular.TabIndex = 0;
             this.buttonRegular.Text = "Regular";
             this.buttonRegular.UseVisualStyleBackColor = true;
@@ -145,19 +154,10 @@ namespace TheMobleShopFormsApp
             this.buttonAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAdmin.Location = new System.Drawing.Point(15, 37);
             this.buttonAdmin.Name = "buttonAdmin";
-            this.buttonAdmin.Size = new System.Drawing.Size(97, 40);
+            this.buttonAdmin.Size = new System.Drawing.Size(113, 52);
             this.buttonAdmin.TabIndex = 0;
             this.buttonAdmin.Text = "Admin";
             this.buttonAdmin.UseVisualStyleBackColor = true;
-            // buttonSeedDatabase
-			// 
-			this.buttonSeedDatabase.Location = new System.Drawing.Point(255, 37);
-			this.buttonSeedDatabase.Name = "buttonSeedDatabase";
-			this.buttonSeedDatabase.Size = new System.Drawing.Size(110, 52);
-			this.buttonSeedDatabase.TabIndex = 1;
-			this.buttonSeedDatabase.Text = "Seed Database";
-			this.buttonSeedDatabase.UseVisualStyleBackColor = true;
-			this.buttonSeedDatabase.Click += new System.EventHandler(this.buttonSeedDatabase_Click);
             // 
             // TheMobileShopLogin
             // 

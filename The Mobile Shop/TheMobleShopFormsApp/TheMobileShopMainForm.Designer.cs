@@ -84,12 +84,12 @@ namespace TheMobleShopFormsApp
             this.dataGridViewInventory.Name = "dataGridViewInventory";
             this.dataGridViewInventory.RowHeadersWidth = 51;
             this.dataGridViewInventory.RowTemplate.Height = 24;
-            this.dataGridViewInventory.Size = new System.Drawing.Size(481, 441);
+            this.dataGridViewInventory.Size = new System.Drawing.Size(586, 441);
             this.dataGridViewInventory.TabIndex = 0;
             // 
             // buttonInventory
             // 
-            this.buttonInventory.Location = new System.Drawing.Point(970, 29);
+            this.buttonInventory.Location = new System.Drawing.Point(1074, 29);
             this.buttonInventory.Name = "buttonInventory";
             this.buttonInventory.Size = new System.Drawing.Size(82, 30);
             this.buttonInventory.TabIndex = 1;
@@ -98,7 +98,7 @@ namespace TheMobleShopFormsApp
             // 
             // buttonPurchaseHistory
             // 
-            this.buttonPurchaseHistory.Location = new System.Drawing.Point(1080, 29);
+            this.buttonPurchaseHistory.Location = new System.Drawing.Point(1184, 29);
             this.buttonPurchaseHistory.Name = "buttonPurchaseHistory";
             this.buttonPurchaseHistory.Size = new System.Drawing.Size(170, 30);
             this.buttonPurchaseHistory.TabIndex = 2;
@@ -116,7 +116,7 @@ namespace TheMobleShopFormsApp
             // 
             // buttonCheckout
             // 
-            this.buttonCheckout.Location = new System.Drawing.Point(1008, 696);
+            this.buttonCheckout.Location = new System.Drawing.Point(134, 257);
             this.buttonCheckout.Name = "buttonCheckout";
             this.buttonCheckout.Size = new System.Drawing.Size(82, 31);
             this.buttonCheckout.TabIndex = 7;
@@ -126,7 +126,7 @@ namespace TheMobleShopFormsApp
             // labelSubTotal
             // 
             this.labelSubTotal.AutoSize = true;
-            this.labelSubTotal.Location = new System.Drawing.Point(14, 134);
+            this.labelSubTotal.Location = new System.Drawing.Point(12, 153);
             this.labelSubTotal.Name = "labelSubTotal";
             this.labelSubTotal.Size = new System.Drawing.Size(69, 17);
             this.labelSubTotal.TabIndex = 8;
@@ -135,7 +135,7 @@ namespace TheMobleShopFormsApp
             // labelTax
             // 
             this.labelTax.AutoSize = true;
-            this.labelTax.Location = new System.Drawing.Point(14, 168);
+            this.labelTax.Location = new System.Drawing.Point(12, 187);
             this.labelTax.Name = "labelTax";
             this.labelTax.Size = new System.Drawing.Size(31, 17);
             this.labelTax.TabIndex = 9;
@@ -144,7 +144,7 @@ namespace TheMobleShopFormsApp
             // labelTotalTxt
             // 
             this.labelTotalTxt.AutoSize = true;
-            this.labelTotalTxt.Location = new System.Drawing.Point(14, 201);
+            this.labelTotalTxt.Location = new System.Drawing.Point(12, 220);
             this.labelTotalTxt.Name = "labelTotalTxt";
             this.labelTotalTxt.Size = new System.Drawing.Size(40, 17);
             this.labelTotalTxt.TabIndex = 10;
@@ -153,7 +153,7 @@ namespace TheMobleShopFormsApp
             // labelTotal
             // 
             this.labelTotal.AutoSize = true;
-            this.labelTotal.Location = new System.Drawing.Point(264, 201);
+            this.labelTotal.Location = new System.Drawing.Point(262, 220);
             this.labelTotal.Name = "labelTotal";
             this.labelTotal.Size = new System.Drawing.Size(48, 17);
             this.labelTotal.TabIndex = 13;
@@ -162,7 +162,7 @@ namespace TheMobleShopFormsApp
             // labelTaxAmount
             // 
             this.labelTaxAmount.AutoSize = true;
-            this.labelTaxAmount.Location = new System.Drawing.Point(264, 168);
+            this.labelTaxAmount.Location = new System.Drawing.Point(262, 187);
             this.labelTaxAmount.Name = "labelTaxAmount";
             this.labelTaxAmount.Size = new System.Drawing.Size(48, 17);
             this.labelTaxAmount.TabIndex = 12;
@@ -171,7 +171,7 @@ namespace TheMobleShopFormsApp
             // labelSubTotalAmount
             // 
             this.labelSubTotalAmount.AutoSize = true;
-            this.labelSubTotalAmount.Location = new System.Drawing.Point(264, 134);
+            this.labelSubTotalAmount.Location = new System.Drawing.Point(262, 153);
             this.labelSubTotalAmount.Name = "labelSubTotalAmount";
             this.labelSubTotalAmount.Size = new System.Drawing.Size(48, 17);
             this.labelSubTotalAmount.TabIndex = 11;
@@ -180,7 +180,7 @@ namespace TheMobleShopFormsApp
             // labelDiscountAmount
             // 
             this.labelDiscountAmount.AutoSize = true;
-            this.labelDiscountAmount.Location = new System.Drawing.Point(255, 151);
+            this.labelDiscountAmount.Location = new System.Drawing.Point(253, 170);
             this.labelDiscountAmount.Name = "labelDiscountAmount";
             this.labelDiscountAmount.Size = new System.Drawing.Size(57, 17);
             this.labelDiscountAmount.TabIndex = 15;
@@ -189,7 +189,7 @@ namespace TheMobleShopFormsApp
             // labelDiscount
             // 
             this.labelDiscount.AutoSize = true;
-            this.labelDiscount.Location = new System.Drawing.Point(14, 151);
+            this.labelDiscount.Location = new System.Drawing.Point(12, 170);
             this.labelDiscount.Name = "labelDiscount";
             this.labelDiscount.Size = new System.Drawing.Size(63, 17);
             this.labelDiscount.TabIndex = 14;
@@ -198,7 +198,7 @@ namespace TheMobleShopFormsApp
             // groupBoxAdmin
             // 
             this.groupBoxAdmin.Controls.Add(this.buttonAdminDashboard);
-            this.groupBoxAdmin.Location = new System.Drawing.Point(970, 199);
+            this.groupBoxAdmin.Location = new System.Drawing.Point(1074, 199);
             this.groupBoxAdmin.Name = "groupBoxAdmin";
             this.groupBoxAdmin.Size = new System.Drawing.Size(234, 86);
             this.groupBoxAdmin.TabIndex = 7;
@@ -222,12 +222,13 @@ namespace TheMobleShopFormsApp
             this.groupBox3.Controls.Add(this.labelDiscountAmount);
             this.groupBox3.Controls.Add(this.labelTax);
             this.groupBox3.Controls.Add(this.labelDiscount);
+            this.groupBox3.Controls.Add(this.buttonCheckout);
             this.groupBox3.Controls.Add(this.labelTotalTxt);
             this.groupBox3.Controls.Add(this.labelTotal);
             this.groupBox3.Controls.Add(this.labelTaxAmount);
-            this.groupBox3.Location = new System.Drawing.Point(863, 481);
+            this.groupBox3.Location = new System.Drawing.Point(864, 470);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(392, 253);
+            this.groupBox3.Size = new System.Drawing.Size(416, 288);
             this.groupBox3.TabIndex = 7;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "POS";
@@ -236,9 +237,9 @@ namespace TheMobleShopFormsApp
             // 
             this.listBoxPaymentMethod.FormattingEnabled = true;
             this.listBoxPaymentMethod.ItemHeight = 16;
-            this.listBoxPaymentMethod.Location = new System.Drawing.Point(16, 51);
+            this.listBoxPaymentMethod.Location = new System.Drawing.Point(15, 57);
             this.listBoxPaymentMethod.Name = "listBoxPaymentMethod";
-            this.listBoxPaymentMethod.Size = new System.Drawing.Size(187, 68);
+            this.listBoxPaymentMethod.Size = new System.Drawing.Size(192, 84);
             this.listBoxPaymentMethod.TabIndex = 20;
             // 
             // textBoxName
@@ -262,7 +263,7 @@ namespace TheMobleShopFormsApp
             this.groupBoxSearch.Controls.Add(this.labelTo);
             this.groupBoxSearch.Controls.Add(this.labelBrand);
             this.groupBoxSearch.Controls.Add(this.groupBoxPrice);
-            this.groupBoxSearch.Location = new System.Drawing.Point(546, 12);
+            this.groupBoxSearch.Location = new System.Drawing.Point(650, 12);
             this.groupBoxSearch.Name = "groupBoxSearch";
             this.groupBoxSearch.Size = new System.Drawing.Size(391, 441);
             this.groupBoxSearch.TabIndex = 17;
@@ -426,7 +427,7 @@ namespace TheMobleShopFormsApp
             this.groupBox1.Controls.Add(this.labelLoginName);
             this.groupBox1.Controls.Add(this.buttonLogout);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(970, 80);
+            this.groupBox1.Location = new System.Drawing.Point(1074, 80);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(276, 104);
             this.groupBox1.TabIndex = 19;
@@ -457,14 +458,13 @@ namespace TheMobleShopFormsApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1281, 770);
+            this.ClientSize = new System.Drawing.Size(1369, 770);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.buttonRemoveItem);
             this.Controls.Add(this.dataGridViewCart);
             this.Controls.Add(this.buttonAddItem);
             this.Controls.Add(this.groupBoxAdmin);
             this.Controls.Add(this.labelCart);
-            this.Controls.Add(this.buttonCheckout);
             this.Controls.Add(this.labelPaymentMethod);
             this.Controls.Add(this.buttonPurchaseHistory);
             this.Controls.Add(this.buttonInventory);
