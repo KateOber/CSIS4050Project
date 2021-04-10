@@ -15,8 +15,8 @@ SET NUMERIC_ROUNDABORT OFF;
 GO
 :setvar DatabaseName "TheMobileShopDB"
 :setvar DefaultFilePrefix "TheMobileShopDB"
-:setvar DefaultDataPath "C:\Users\webdev1\AppData\Local\Microsoft\Microsoft SQL Server Local DB\Instances\MSSQLLocalDB\"
-:setvar DefaultLogPath "C:\Users\webdev1\AppData\Local\Microsoft\Microsoft SQL Server Local DB\Instances\MSSQLLocalDB\"
+:setvar DefaultDataPath "C:\Users\Kate\AppData\Local\Microsoft\Microsoft SQL Server Local DB\Instances\MSSQLLocalDB\"
+:setvar DefaultLogPath "C:\Users\Kate\AppData\Local\Microsoft\Microsoft SQL Server Local DB\Instances\MSSQLLocalDB\"
 
 GO
 :on error exit
@@ -49,7 +49,7 @@ BEGIN
 END
 
 GO
-PRINT N'Creating database $(DatabaseName)...'
+PRINT N'Creating $(DatabaseName)...'
 GO
 CREATE DATABASE [$(DatabaseName)]
     ON 
@@ -243,7 +243,7 @@ IF fulltextserviceproperty(N'IsFulltextInstalled') = 1
 
 
 GO
-PRINT N'Creating Table [dbo].[Categories]...';
+PRINT N'Creating [dbo].[Categories]...';
 
 
 GO
@@ -257,7 +257,7 @@ CREATE TABLE [dbo].[Categories] (
 
 
 GO
-PRINT N'Creating Table [dbo].[Employees]...';
+PRINT N'Creating [dbo].[Employees]...';
 
 
 GO
@@ -274,7 +274,7 @@ CREATE TABLE [dbo].[Employees] (
 
 
 GO
-PRINT N'Creating Table [dbo].[Inventory]...';
+PRINT N'Creating [dbo].[Inventory]...';
 
 
 GO
@@ -292,7 +292,7 @@ CREATE TABLE [dbo].[Inventory] (
 
 
 GO
-PRINT N'Creating Table [dbo].[TransactionProducts]...';
+PRINT N'Creating [dbo].[TransactionProducts]...';
 
 
 GO
@@ -306,7 +306,7 @@ CREATE TABLE [dbo].[TransactionProducts] (
 
 
 GO
-PRINT N'Creating Table [dbo].[Transactions]...';
+PRINT N'Creating [dbo].[Transactions]...';
 
 
 GO
@@ -324,7 +324,7 @@ CREATE TABLE [dbo].[Transactions] (
 
 
 GO
-PRINT N'Creating Foreign Key [dbo].[FK_Inventory_Categories_CategoryId]...';
+PRINT N'Creating [dbo].[FK_Inventory_Categories_CategoryId]...';
 
 
 GO
@@ -333,7 +333,7 @@ ALTER TABLE [dbo].[Inventory]
 
 
 GO
-PRINT N'Creating Foreign Key [dbo].[FK_TransactionProducts_Inventory_ProductId]...';
+PRINT N'Creating [dbo].[FK_TransactionProducts_Inventory_ProductId]...';
 
 
 GO
@@ -342,7 +342,7 @@ ALTER TABLE [dbo].[TransactionProducts]
 
 
 GO
-PRINT N'Creating Foreign Key [dbo].[FK_TransactionProducts_Transactions_TransactionId]...';
+PRINT N'Creating [dbo].[FK_TransactionProducts_Transactions_TransactionId]...';
 
 
 GO
@@ -351,7 +351,7 @@ ALTER TABLE [dbo].[TransactionProducts]
 
 
 GO
-PRINT N'Creating Foreign Key [dbo].[FK_Transactions_Employees_EmployeeId]...';
+PRINT N'Creating [dbo].[FK_Transactions_Employees_EmployeeId]...';
 
 
 GO

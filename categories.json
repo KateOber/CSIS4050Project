@@ -1,0 +1,32 @@
+[
+  {
+    "category_id": 1,
+    "category_name": "Android",
+    "category_code": "C1"
+  },
+  {
+    "category_id": 2,
+    "category_name": "iOS(Apple)",
+    "category_code": "C2"
+  },
+  {
+    "category_id": 3,
+    "category_name": "Symbian",
+    "category_code": "C3"
+  },
+  {
+    "category_id": 4,
+    "category_name": "BlackBerry",
+    "category_code": "C4"
+  },
+  {
+    "category_id": 5,
+    "category_name": "Windows",
+    "category_code": "C5"
+  },
+  {
+    "category_id": 6,
+    "category_name": "others(Accessories)",
+    "category_code": "C6"
+  }
+]

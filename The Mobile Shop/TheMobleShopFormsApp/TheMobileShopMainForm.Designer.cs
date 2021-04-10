@@ -48,6 +48,7 @@ namespace TheMobleShopFormsApp
             this.listBoxPaymentMethod = new System.Windows.Forms.ListBox();
             this.textBoxName = new System.Windows.Forms.TextBox();
             this.groupBoxSearch = new System.Windows.Forms.GroupBox();
+            this.buttonReset = new System.Windows.Forms.Button();
             this.buttonSearch = new System.Windows.Forms.Button();
             this.listBoxCategory = new System.Windows.Forms.ListBox();
             this.textBoxPriceMax = new System.Windows.Forms.TextBox();
@@ -67,7 +68,6 @@ namespace TheMobleShopFormsApp
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.labelRole = new System.Windows.Forms.Label();
             this.buttonLogout = new System.Windows.Forms.Button();
-            this.buttonReset = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInventory)).BeginInit();
             this.groupBoxAdmin.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -135,7 +135,7 @@ namespace TheMobleShopFormsApp
             // labelTax
             // 
             this.labelTax.AutoSize = true;
-            this.labelTax.Location = new System.Drawing.Point(14, 151);
+            this.labelTax.Location = new System.Drawing.Point(14, 168);
             this.labelTax.Name = "labelTax";
             this.labelTax.Size = new System.Drawing.Size(31, 17);
             this.labelTax.TabIndex = 9;
@@ -162,7 +162,7 @@ namespace TheMobleShopFormsApp
             // labelTaxAmount
             // 
             this.labelTaxAmount.AutoSize = true;
-            this.labelTaxAmount.Location = new System.Drawing.Point(264, 151);
+            this.labelTaxAmount.Location = new System.Drawing.Point(264, 168);
             this.labelTaxAmount.Name = "labelTaxAmount";
             this.labelTaxAmount.Size = new System.Drawing.Size(48, 17);
             this.labelTaxAmount.TabIndex = 12;
@@ -180,7 +180,7 @@ namespace TheMobleShopFormsApp
             // labelDiscountAmount
             // 
             this.labelDiscountAmount.AutoSize = true;
-            this.labelDiscountAmount.Location = new System.Drawing.Point(255, 168);
+            this.labelDiscountAmount.Location = new System.Drawing.Point(255, 151);
             this.labelDiscountAmount.Name = "labelDiscountAmount";
             this.labelDiscountAmount.Size = new System.Drawing.Size(57, 17);
             this.labelDiscountAmount.TabIndex = 15;
@@ -189,7 +189,7 @@ namespace TheMobleShopFormsApp
             // labelDiscount
             // 
             this.labelDiscount.AutoSize = true;
-            this.labelDiscount.Location = new System.Drawing.Point(14, 168);
+            this.labelDiscount.Location = new System.Drawing.Point(14, 151);
             this.labelDiscount.Name = "labelDiscount";
             this.labelDiscount.Size = new System.Drawing.Size(63, 17);
             this.labelDiscount.TabIndex = 14;
@@ -238,7 +238,7 @@ namespace TheMobleShopFormsApp
             this.listBoxPaymentMethod.ItemHeight = 16;
             this.listBoxPaymentMethod.Location = new System.Drawing.Point(16, 51);
             this.listBoxPaymentMethod.Name = "listBoxPaymentMethod";
-            this.listBoxPaymentMethod.Size = new System.Drawing.Size(186, 52);
+            this.listBoxPaymentMethod.Size = new System.Drawing.Size(187, 68);
             this.listBoxPaymentMethod.TabIndex = 20;
             // 
             // textBoxName
@@ -268,6 +268,15 @@ namespace TheMobleShopFormsApp
             this.groupBoxSearch.TabIndex = 17;
             this.groupBoxSearch.TabStop = false;
             this.groupBoxSearch.Text = "Search";
+            // 
+            // buttonReset
+            // 
+            this.buttonReset.Location = new System.Drawing.Point(113, 399);
+            this.buttonReset.Name = "buttonReset";
+            this.buttonReset.Size = new System.Drawing.Size(84, 36);
+            this.buttonReset.TabIndex = 18;
+            this.buttonReset.Text = "Reset";
+            this.buttonReset.UseVisualStyleBackColor = true;
             // 
             // buttonSearch
             // 
@@ -443,15 +452,6 @@ namespace TheMobleShopFormsApp
             this.buttonLogout.TabIndex = 1;
             this.buttonLogout.Text = "Logout";
             this.buttonLogout.UseVisualStyleBackColor = true;
-            // 
-            // buttonReset
-            // 
-            this.buttonReset.Location = new System.Drawing.Point(113, 399);
-            this.buttonReset.Name = "buttonReset";
-            this.buttonReset.Size = new System.Drawing.Size(84, 36);
-            this.buttonReset.TabIndex = 18;
-            this.buttonReset.Text = "Reset";
-            this.buttonReset.UseVisualStyleBackColor = true;
             // 
             // TheMobileShopMainForm
             // 

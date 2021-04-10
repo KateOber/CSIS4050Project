@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "first_name": "Kate",
+    "last_name": "O",
+    "employee_code": "ADM-001",
+    "role": "A"
+  },
+  {
+    "id": 2,
+    "first_name": "Indu Priya",
+    "last_name": "Addepalli",
+    "employee_code": "ADM-002",
+    "role": "A"
+  },
+  {
+    "id": 3,
+    "first_name": "Naga Sudheer",
+    "last_name": "Bolla",
+    "employee_code": "ADM-003",
+    "role": "A"
+  },
+  {
+    "id": 4,
+    "first_name": "Jared",
+    "last_name": "Bowland",
+    "employee_code": "EMP-001",
+    "role": "E"
+  },
+  {
+    "id": 5,
+    "first_name": "Cristen",
+    "last_name": "Stares",
+    "employee_code": "EMP-002",
+    "role": "E"
+  },
+  {
+    "id": 6,
+    "first_name": "Boy",
+    "last_name": "Dupre",
+    "employee_code": "EMP-003",
+    "role": "E"
+  },
+  {
+    "id": 7,
+    "first_name": "Gwynne",
+    "last_name": "Armitt",
+    "employee_code": "EMP-004",
+    "role": "E"
+  },
+  {
+    "id": 8,
+    "first_name": "Willem",
+    "last_name": "Swadling",
+    "employee_code": "EMP-005",
+    "role": "E"
+  },
+  {
+    "id": 9,
+    "first_name": "Tova",
+    "last_name": "Minard",
+    "employee_code": "EMP-006",
+    "role": "E"
+  },
+  {
+    "id": 10,
+    "first_name": "Talyah",
+    "last_name": "De la croix",
+    "employee_code": "EMP-007",
+    "role": "E"
+  }
+]
