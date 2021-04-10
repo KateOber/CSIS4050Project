@@ -199,7 +199,7 @@ namespace TheMobleShopFormsApp
             this.buttonInventoryToLoad.Name = "buttonInventoryToLoad";
             this.buttonInventoryToLoad.Size = new System.Drawing.Size(300, 41);
             this.buttonInventoryToLoad.TabIndex = 6;
-            this.buttonInventoryToLoad.Text = "Inventory To Load";
+            this.buttonInventoryToLoad.Text = "Inventory To Stock";
             this.buttonInventoryToLoad.UseVisualStyleBackColor = true;
             // 
             // buttonGenerateInventoryReport
@@ -209,7 +209,7 @@ namespace TheMobleShopFormsApp
             this.buttonGenerateInventoryReport.Name = "buttonGenerateInventoryReport";
             this.buttonGenerateInventoryReport.Size = new System.Drawing.Size(300, 41);
             this.buttonGenerateInventoryReport.TabIndex = 5;
-            this.buttonGenerateInventoryReport.Text = "Available Inventory Report";
+            this.buttonGenerateInventoryReport.Text = "Inventory Report";
             this.buttonGenerateInventoryReport.UseVisualStyleBackColor = true;
             // 
             // label4
