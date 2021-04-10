@@ -12,6 +12,9 @@ using System.Windows.Forms;
 
 namespace TheMobleShopFormsApp
 {
+    /// <summary>
+    /// The following class opens TheMobileShopAdminForm in which admin can generate the report.
+    /// </summary>
     public partial class TheMobileShopAdminForm : Form
     {
         public TheMobileShopAdminForm()
