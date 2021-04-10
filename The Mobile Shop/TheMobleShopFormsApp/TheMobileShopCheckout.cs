@@ -12,6 +12,10 @@ using TheMobileShopCodeFirstFromDB;
 
 namespace TheMobleShopFormsApp
 {
+    /// <summary>
+    /// The following class opens TheMobileShopCheckout can be accessed by both the employee and the admin
+    /// with the products added to the cart, their quantity, and pricing information.
+    /// </summary>
     public partial class TheMobileShopCheckout : Form
     {
         public TheMobileShopCheckout(List<TransactionProduct> addedItemList)
@@ -88,6 +92,8 @@ namespace TheMobleShopFormsApp
             int totalQty = 0;
             double? totalDiscount = 0.0;
             double subTotal = 0.0;
+            //the list of products added as per customer choice by admin/employee will be viewed as a list in the datagridview
+
             // unit-of-work context
             using (TheMobileShopEntities context = new TheMobileShopEntities())
             {
