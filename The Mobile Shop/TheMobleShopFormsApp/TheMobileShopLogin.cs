@@ -12,6 +12,9 @@ using System.Data.Entity;
 
 namespace TheMobleShopFormsApp
 {
+    /// <summary>
+    /// This class for the regular employee/admin to login to the "The Mobile Shop" application based on the employee code
+    /// </summary>
     public partial class TheMobileShopLogin : Form
     {
        
@@ -26,22 +29,23 @@ namespace TheMobleShopFormsApp
             buttonAdmin.Click += (s,e) => GetEmployeeCode("admin");
             buttonRegular.Click += (s, e) => GetEmployeeCode("reg");
         }
-
+	
+	//Login button is disabled until the database is loaded by the seed database button
         private void TheMobileShopLogin_Load(object sender, EventArgs e)
         {
-            using (TheMobileShopEntities context = new TheMobileShopEntities())
-            {
-                context.SeedDatabase();
-            }
-
+            buttonLogin.Enabled = false;
         }
         public void GetEmployeeCode(string role)
         {
             if (role == "admin")
-                textBoxEmployeeCode.Text = "ADM-001";
+                textBoxEmployeeCode.Text = "ADM-001";//read only string to hold the admin employee code
             else
-                textBoxEmployeeCode.Text = "EMP-001";
+                textBoxEmployeeCode.Text = "EMP-001";//read only string to hold the regular employee code
         }
+        
+        /// <summary>
+        ///  This method is called when the Login button is clicked, it hides this form 
+        /// </summary>
         public void OpenAndHideForm(Form form)
         {   
             this.Hide();
@@ -54,6 +58,8 @@ namespace TheMobleShopFormsApp
             }
 
         }
+        //The following will check for the employee code textbox if not entered it will generate an error message
+        //and it also checks for the valid employee code
 
         private void ButtonLogin_Click(object sender, EventArgs e)
         {
@@ -95,6 +101,16 @@ namespace TheMobleShopFormsApp
             }
             else
                 return false;
+        }
+        //the seedDatabase button will load the data into the database and then the login button is enabled.
+        private void buttonSeedDatabase_Click(object sender, EventArgs e)
+		{
+            using (TheMobileShopEntities context = new TheMobileShopEntities())
+            {
+                context.SeedDatabase();
+            }
+            
+            buttonLogin.Enabled = true;
         }
     }
 }

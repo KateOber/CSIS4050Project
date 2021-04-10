@@ -39,6 +39,7 @@ namespace TheMobleShopFormsApp
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.buttonRegular = new System.Windows.Forms.Button();
             this.buttonAdmin = new System.Windows.Forms.Button();
+            this.buttonSeedDatabase = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -119,6 +120,7 @@ namespace TheMobleShopFormsApp
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.buttonSeedDatabase);
             this.groupBox1.Controls.Add(this.buttonRegular);
             this.groupBox1.Controls.Add(this.buttonAdmin);
             this.groupBox1.Location = new System.Drawing.Point(344, 455);
@@ -147,6 +149,15 @@ namespace TheMobleShopFormsApp
             this.buttonAdmin.TabIndex = 0;
             this.buttonAdmin.Text = "Admin";
             this.buttonAdmin.UseVisualStyleBackColor = true;
+            // buttonSeedDatabase
+			// 
+			this.buttonSeedDatabase.Location = new System.Drawing.Point(255, 37);
+			this.buttonSeedDatabase.Name = "buttonSeedDatabase";
+			this.buttonSeedDatabase.Size = new System.Drawing.Size(110, 52);
+			this.buttonSeedDatabase.TabIndex = 1;
+			this.buttonSeedDatabase.Text = "Seed Database";
+			this.buttonSeedDatabase.UseVisualStyleBackColor = true;
+			this.buttonSeedDatabase.Click += new System.EventHandler(this.buttonSeedDatabase_Click);
             // 
             // TheMobileShopLogin
             // 
@@ -181,6 +192,8 @@ namespace TheMobleShopFormsApp
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button buttonRegular;
         private System.Windows.Forms.Button buttonAdmin;
+        private System.Windows.Forms.Button buttonSeedDatabase;
+
     }
 }
 
