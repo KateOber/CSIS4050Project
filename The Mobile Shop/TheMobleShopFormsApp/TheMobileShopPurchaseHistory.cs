@@ -47,7 +47,7 @@ namespace TheMobleShopFormsApp
           {
                 new DataGridViewTextBoxColumn() { Name = "ID"},
                 new DataGridViewTextBoxColumn() { Name = "Date" },
-                new DataGridViewTextBoxColumn() { Name = "Total Price" },               
+                new DataGridViewTextBoxColumn() { Name = "Price" },
                 new DataGridViewTextBoxColumn() { Name = "Product" },
                 new DataGridViewTextBoxColumn() { Name = "Quantity" },
                 new DataGridViewTextBoxColumn() { Name = "Discount" },
@@ -66,15 +66,19 @@ namespace TheMobleShopFormsApp
                     {
                         item.Transaction.TransactionId.ToString(),
                         item.Transaction.Date.ToString(),
-                        item.Transaction.TotalPrice.ToString(),
+                        (item.Inventory.Price*item.Quantity).ToString("C"),
                         item.Inventory.Name,
                         item.Quantity.ToString(),
                         item.Discount.ToString(),
                         item.Transaction.Employee.FirstName.ToString()
                      };
-                        dataGridView.Rows.Add(rowAdd);
+                    
+                    dataGridView.Rows.Add(rowAdd);
                 }
             }
         }
     }
 }
+
+//(item.Discount is null) ? "0.0" : item.Discount..Value.ToString("C"),
+                        

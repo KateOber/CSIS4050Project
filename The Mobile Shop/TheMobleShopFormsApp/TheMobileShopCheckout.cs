@@ -14,20 +14,28 @@ namespace TheMobleShopFormsApp
 {
     public partial class TheMobileShopCheckout : Form
     {
-        public TheMobileShopCheckout()
+        public TheMobileShopCheckout(List<TransactionProduct> addedItemList)
         {
             InitializeComponent();
 
-            this.Load += TheMobileShopCheckout_Load;
+            this.Load += (s, e) => TheMobileShopCheckout_Load(addedItemList);
             this.Text = "The Mobile Shop Checkout";
             buttonBack.Click += ButtonBack_Click;
         }
-
-        private void TheMobileShopCheckout_Load(object sender, EventArgs e)
+        /// <summary>
+        /// loading data into datagrid view om load
+        /// </summary>
+        /// <param name="recentTransactions"></param>
+        private void TheMobileShopCheckout_Load(List<TransactionProduct> recentTransactions)
         {
-            InitializeDataGridView(dataGridViewItems);
+            InitializeDataGridView(dataGridViewItems, recentTransactions);
         }
-        private void InitializeDataGridView(DataGridView dataGridView)
+        /// <summary>
+        /// Initialize and populate data into gridview
+        /// </summary>
+        /// <param name="dataGridView"></param>
+        /// <param name="recentTransactions"></param>
+        private void InitializeDataGridView(DataGridView dataGridView, List<TransactionProduct> recentTransactions)
         {
             // Allow users to add/delete rows, and fill out columns to the entire width of the control
             dataGridView.AllowUserToAddRows = false;
@@ -35,45 +43,48 @@ namespace TheMobleShopFormsApp
             dataGridView.ReadOnly = true;
             dataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
-
             dataGridView.Columns.Clear();
 
             DataGridViewTextBoxColumn[] dataGridColumns = new DataGridViewTextBoxColumn[]
           {
-                new DataGridViewTextBoxColumn() { Name = "ID"},
-                new DataGridViewTextBoxColumn() { Name = "Date" },
-                new DataGridViewTextBoxColumn() { Name = "Total Price" },
                 new DataGridViewTextBoxColumn() { Name = "Product" },
                 new DataGridViewTextBoxColumn() { Name = "Quantity" },
-                new DataGridViewTextBoxColumn() { Name = "Discount" },
-                new DataGridViewTextBoxColumn() { Name = "Sold By" },
+                new DataGridViewTextBoxColumn() { Name = "Total Price" },
+                new DataGridViewTextBoxColumn() { Name = "Discount" }
           };
 
             dataGridView.Columns.AddRange(dataGridColumns);
 
-
-
+            int totalQty = 0;
+            double? totalDiscount = 0.0;
+            double subTotal = 0.0;
             // unit-of-work context
             using (TheMobileShopEntities context = new TheMobileShopEntities())
             {
-
-                Transaction recentTransaction = context.Transactions.Find(1);
-                TransactionProduct item = context.TransactionProducts.Find(recentTransaction);
                 // loop through 
-               
+                foreach (TransactionProduct item in recentTransactions)
+                {
                     string[] rowAdd =
                     {
-                        item.Transaction.TransactionId.ToString(),
-                        item.Transaction.Date.ToString(),
-                        item.Transaction.TotalPrice.ToString(),
                         item.Inventory.Name,
                         item.Quantity.ToString(),
-                        item.Discount.ToString(),
-                        item.Transaction.Employee.FirstName.ToString()
-                     };
+                        item.Inventory.Price.ToString(),
+                        item.Discount.ToString()
+                    };
+                    totalQty += item.Quantity;
+                    subTotal += item.Inventory.Price * item.Quantity;
+                    totalDiscount += item.Discount;
                     dataGridView.Rows.Add(rowAdd);
-                
+                }
             }
+            // calculate and show data into view fields.
+            double tax = subTotal * 0.12;
+            double? total = subTotal + tax - totalDiscount;
+            labelSubTotal.Text =  subTotal.ToString("C");   
+            labelDiscount.Text =  "$ "+Convert.ToString(totalDiscount);
+            labelTotalNoOfItems.Text = totalQty + " Items";
+            labelTax.Text =  tax.ToString("C");
+            labelTotal.Text = total.HasValue? total.Value.ToString("C"):"$ 0.0";
         }
 
         private void ButtonBack_Click(object sender, EventArgs e)
