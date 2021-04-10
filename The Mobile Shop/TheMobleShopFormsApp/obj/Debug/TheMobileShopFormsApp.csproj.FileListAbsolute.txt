@@ -89,3 +89,8 @@ C:\Users\webdev1\Documents\DevSudheer\Pers\sem4\BusOps\project\CSIS4050Project\T
 C:\Users\webdev1\Documents\DevSudheer\Pers\sem4\BusOps\project\CSIS4050Project\The Mobile Shop\TheMobleShopFormsApp\obj\Debug\TheMobileShopFormsApp.csproj.CopyComplete
 C:\Users\webdev1\Documents\DevSudheer\Pers\sem4\BusOps\project\CSIS4050Project\The Mobile Shop\TheMobleShopFormsApp\obj\Debug\TheMobleShopFormsApp.exe
 C:\Users\webdev1\Documents\DevSudheer\Pers\sem4\BusOps\project\CSIS4050Project\The Mobile Shop\TheMobleShopFormsApp\obj\Debug\TheMobleShopFormsApp.pdb
+C:\Users\Kate\Documents\GitHub\CSIS4050Project\The Mobile Shop\TheMobleShopFormsApp\bin\Debug\DataTableAccessLayer.dll
+C:\Users\Kate\Documents\GitHub\CSIS4050Project\The Mobile Shop\TheMobleShopFormsApp\bin\Debug\TheMobileShopValidation.dll
+C:\Users\Kate\Documents\GitHub\CSIS4050Project\The Mobile Shop\TheMobleShopFormsApp\bin\Debug\DataTableAccessLayer.pdb
+C:\Users\Kate\Documents\GitHub\CSIS4050Project\The Mobile Shop\TheMobleShopFormsApp\bin\Debug\TheMobileShopValidation.pdb
+C:\Users\Kate\Documents\GitHub\CSIS4050Project\The Mobile Shop\TheMobleShopFormsApp\bin\Debug\TheMobileShopValidation.dll.config

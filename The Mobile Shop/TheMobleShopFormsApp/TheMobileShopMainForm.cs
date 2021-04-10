@@ -56,98 +56,6 @@ namespace TheMobleShopFormsApp
 
         }
         /// <summary>
-        /// Method for changing the value of discount field.
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void DataGridViewCart_CellEndEdit(object sender, DataGridViewCellEventArgs e)
-        {
-            DiscountEdit(dataGridViewCart);
-        }
-
-        /// <summary>
-        /// Removes Items from cart and adds their quantity back to inventory
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void ButtonRemoveItem_Click(object sender, EventArgs e)
-        {
-            if (dataGridViewCart.SelectedRows.Count >= 1)
-            {
-                //get all the selected rows
-                foreach (DataGridViewRow row in dataGridViewCart.SelectedRows)
-                {
-                    //get product ID and quantity from selected row
-                    int productId = Int32.Parse(row.Cells[0].Value.ToString());
-                    int productQuantity = Int32.Parse(row.Cells[4].Value.ToString());
-
-                    using (TheMobileShopEntities context = new TheMobileShopEntities())
-                    {
-                        //find the item in the Database (context)
-                        Inventory itemFromContext = context.Inventories.Find(productId);
-
-                        for (int x = 0; x < cart.Count; x++)
-                        {
-                            //find the selected item in cart, decrease quantity by 1 or remove
-                            if (itemFromContext.ProductId == cart[x].Inventory.ProductId)
-                            {
-                                //item will be removed from cart if there was only 1
-                                if (cart[x].quantity > 1)
-                                    cart[x].quantity--;
-                                else
-                                    cart.RemoveAt(x);
-                            }
-                        }
-                        //increase item quantity in inventory
-                        itemFromContext.Quantity++;
-                        context.SaveChanges();
-
-                        //reload Cart and Inventory DataGridView
-                        ReloadDataGridView();
-                    }
-
-                }
-            }
-        }
-
-        /// <summary>
-        /// Resets Items in Inventory DataGridView
-        /// And clears all textBoxes + unselects Category
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void ButtonReset_Click(object sender, EventArgs e)
-        {
-            //reset Inventory DataGrid
-            ReloadDataGridView();
-            //reset all textBoxes and listBox
-            textBoxBrand.Clear();
-            textBoxName.Clear();
-            textBoxPriceMin.Clear();
-            textBoxPriceMax.Clear();
-            listBoxCategory.SelectedIndex = -1;
-        }
-        /// <summary>
-        /// Opens Purchase History Form and Hides current form
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void ButtonPurchaseHistory_Click(object sender, EventArgs e)
-        {
-            TheMobileShopPurchaseHistory purchaseHistoryForm = new TheMobileShopPurchaseHistory();
-            OpenAndHideForm(purchaseHistoryForm);
-        }
-        /// <summary>
-        /// Logs out user and navigate to login form
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void ButtonLogout_Click(object sender, EventArgs e)
-        {
-            this.DialogResult = DialogResult.OK;
-            Close();
-        }
-        /// <summary>
         /// Loading initial data
         /// </summary>
         private void TheMobileShopMainForm_Load()
@@ -163,50 +71,63 @@ namespace TheMobleShopFormsApp
                 listBoxCategory.Items.Add(cat.CategoryName);
             }
         }
+        /// <summary>
+        /// Initialises data grid view for inventory
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="gridView"></param>
+        /// <param name="columnsToHide"></param>
+        private void InitializeDataGridView<T>(DataGridView gridView, params string[] columnsToHide) where T : class
+        {
+            // add the Binding List to the datagridview
+            gridView.DataSource = Controller<TheMobileShopEntities, T>.SetBindingList();
+
+            // go through the columns that we don't want to display - and set them to not visible
+            foreach (string column in columnsToHide)
+                gridView.Columns[column].Visible = false;
+            gridView.Columns["CategoryId"].HeaderText = "Category";
+            //gridView.Columns[4].ValueType = typeof(string);
+            //gridView.Columns[4].CellTemplate.ValueType = typeof(string);
+            //            MessageBox.Show(gridView.Columns["CategoryId"].DisplayIndex+"");
+            // Don't allow users to add/delete rows, and fill out columns to the entire width of the control
+            gridView.AllowUserToAddRows = false;
+            gridView.AllowUserToDeleteRows = false;
+            gridView.ReadOnly = true;
+            gridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+        }
 
         /// <summary>
-        /// Hides current form, Opens child form
-        /// Shows current form once child form
-        /// Returns OK dialog (closes)
+        /// sets up cart grid controls and data
         /// </summary>
-        /// <param name="form"></param>
-        public void OpenAndHideForm(Form form)
+        /// <param name="dataGridView"></param>
+        private static void InitializeCartView(DataGridView dataGridView)
         {
-            this.Hide();
-            var formDialog = form.ShowDialog();
-            if (formDialog == DialogResult.OK)
+            dataGridView.Columns.Clear();
+
+            DataGridViewTextBoxColumn[] dataGridColumns = new DataGridViewTextBoxColumn[]
+          {
+                new DataGridViewTextBoxColumn() { Name = "ID"},
+                new DataGridViewTextBoxColumn() { Name = "Name"},
+                new DataGridViewTextBoxColumn() { Name = "Category" },
+                new DataGridViewTextBoxColumn() { Name = "Brand" },
+                new DataGridViewTextBoxColumn() { Name = "Quantity" },
+                new DataGridViewTextBoxColumn() { Name = "Price" },
+                new DataGridViewTextBoxColumn() { Name = "Discount" },
+          };
+
+            dataGridView.Columns.AddRange(dataGridColumns);
+
+            // set all properties
+            dataGridView.AllowUserToAddRows = false;
+            dataGridView.AllowUserToDeleteRows = true;
+            dataGridView.ReadOnly = false;
+            dataGridView.MultiSelect = false;
+            dataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            // allow only discount to be editable
+            foreach (DataGridViewColumn dc in dataGridView.Columns)
             {
-                form.Hide();
-                this.Show();
+                dc.ReadOnly = !dc.Index.Equals(6);
             }
-
-        }
-
-        /// <summary>
-        /// Setup values in payment method listBox
-        /// </summary>
-        public void InitializePaymentListBox()
-        {
-            List<string> paymentMethods = new List<string>
-            {
-                "Cash",
-                "MasterCard",
-                "Visa",
-                "AmericanExpress",
-                "Debit"
-            };
-            foreach (string m in paymentMethods)
-                listBoxPaymentMethod.Items.Add(m);
-        }
-        /// <summary>
-        /// opens admin form
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void ButtonAdminDashboard_Click(object sender, EventArgs e)
-        {
-            TheMobileShopAdminForm AdminForm = new TheMobileShopAdminForm();
-            OpenAndHideForm(AdminForm);
         }
         /// <summary>
         /// Click event handling add item to cart
@@ -269,6 +190,100 @@ namespace TheMobleShopFormsApp
         }
 
         /// <summary>
+        /// Method for changing the value of discount field.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void DataGridViewCart_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            DiscountEdit(dataGridViewCart);
+        }
+        /// <summary>
+        /// After user edits discount manually, it triggers and update data.
+        /// </summary>
+        /// <param name="dataGridView"></param>
+        private void DiscountEdit(DataGridView dataGridView)
+        {
+            foreach (DataGridViewRow row in dataGridView.Rows)
+            {
+                double idinventoryList2 = Double.Parse(row.Cells[6].Value.ToString());
+                int idinventoryList = Int32.Parse(row.Cells[0].Value.ToString());
+                for (int x = 0; x < cart.Count; x++)
+                {
+                    if (cart[x].Inventory.ProductId == idinventoryList)
+                    {
+                        cart[x].discount = idinventoryList2;
+
+                    }
+                }
+            }
+            ReloadDataGridView();
+        }
+        /// <summary>
+        /// Removes Items from cart and adds their quantity back to inventory
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void ButtonRemoveItem_Click(object sender, EventArgs e)
+        {
+            if (dataGridViewCart.SelectedRows.Count >= 1)
+            {
+                //get all the selected rows
+                foreach (DataGridViewRow row in dataGridViewCart.SelectedRows)
+                {
+                    //get product ID and quantity from selected row
+                    int productId = Int32.Parse(row.Cells[0].Value.ToString());
+                    int productQuantity = Int32.Parse(row.Cells[4].Value.ToString());
+
+                    using (TheMobileShopEntities context = new TheMobileShopEntities())
+                    {
+                        //find the item in the Database (context)
+                        Inventory itemFromContext = context.Inventories.Find(productId);
+
+                        for (int x = 0; x < cart.Count; x++)
+                        {
+                            //find the selected item in cart, decrease quantity by 1 or remove
+                            if (itemFromContext.ProductId == cart[x].Inventory.ProductId)
+                            {
+                                //item will be removed from cart if there was only 1
+                                if (cart[x].quantity > 1)
+                                    cart[x].quantity--;
+                                else
+                                    cart.RemoveAt(x);
+                            }
+                        }
+                        //increase item quantity in inventory
+                        itemFromContext.Quantity++;
+                        context.SaveChanges();
+
+                        //reload Cart and Inventory DataGridView
+                        ReloadDataGridView();
+                    }
+
+                }
+            }
+        }
+
+
+        /// <summary>
+        /// Setup values in payment method listBox
+        /// </summary>
+        public void InitializePaymentListBox()
+        {
+            List<string> paymentMethods = new List<string>
+            {
+                "Cash",
+                "MasterCard",
+                "Visa",
+                "AmericanExpress",
+                "Debit"
+            };
+            foreach (string m in paymentMethods)
+                listBoxPaymentMethod.Items.Add(m);
+        }
+
+
+        /// <summary>
         /// Search for specific item by applying filters selected by user
         /// </summary>
         /// <param name="sender"></param>
@@ -293,7 +308,6 @@ namespace TheMobleShopFormsApp
 
             for (int x = inventoryList.Count - 1; x >= 0; x--)
             {
-                string t = inventoryList[x].CategoryId.ToString();
                 if (name != "")
                 {
                     if (!(inventoryList[x].Name.ToLower().Contains(name)))
@@ -301,8 +315,17 @@ namespace TheMobleShopFormsApp
                 }
                 if (brand != "")
                 {
-                    if (!(inventoryList[x].Brand.ToLower().Contains(brand)))
-                        inventoryList.Remove(inventoryList[x]);
+                    try
+                    {
+                        if (!(inventoryList[x].Brand.ToLower().Contains(brand)))
+                            inventoryList.Remove(inventoryList[x]);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Nothing with these parameters");
+                        textBoxPriceMin.ResetText();
+                    }
+
                 }
                 if (catId != 0)
                 {
@@ -311,13 +334,29 @@ namespace TheMobleShopFormsApp
                 }
                 if (priceMin != 0)
                 {
-                    if (inventoryList[x].Price < priceMin)
-                        inventoryList.Remove(inventoryList[x]);
+                    try
+                    {
+                        if (inventoryList[x].Price < priceMin)
+                            inventoryList.Remove(inventoryList[x]);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Nothing in this range");
+                        textBoxPriceMin.ResetText();
+                    }
                 }
                 if (priceMax != 0)
                 {
-                    if (inventoryList[x].Price > priceMax)
-                        inventoryList.Remove(inventoryList[x]);
+                    try
+                    {
+                        if (inventoryList[x].Price > priceMax)
+                            inventoryList.Remove(inventoryList[x]);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Nothing in this range");
+                        textBoxPriceMax.ResetText();
+                    }
                 }
             }
 
@@ -326,6 +365,24 @@ namespace TheMobleShopFormsApp
             dataGridViewInventory.Refresh();
 
         }
+        /// <summary>
+        /// Resets Items in Inventory DataGridView
+        /// And clears all textBoxes + unselects Category
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void ButtonReset_Click(object sender, EventArgs e)
+        {
+            //reset Inventory DataGrid
+            ReloadDataGridView();
+            //reset all textBoxes and listBox
+            textBoxBrand.Clear();
+            textBoxName.Clear();
+            textBoxPriceMin.Clear();
+            textBoxPriceMax.Clear();
+            listBoxCategory.SelectedIndex = -1;
+        }
+
         /// <summary>
         /// When checkout button is clicked, this will be triggered.
         /// </summary>
@@ -399,105 +456,7 @@ namespace TheMobleShopFormsApp
             }
             else MessageBox.Show("No Items to Checkout");
         }
-        /// <summary>
-        /// open inventory form
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void ButtonInventory_Click(object sender, EventArgs e)
-        {
-            TheMobileShopInventory inventoryForm = new TheMobileShopInventory();
-            var showFormDialog = inventoryForm.ShowDialog();
-            if (showFormDialog == DialogResult.OK)
-            {
-                // reload the datagridview
-                dataGridViewInventory.DataSource = Controller<TheMobileShopEntities, Inventory>.SetBindingList();
-                loadDataToInvDataTable();
-                dataGridViewInventory.Refresh();
-            }
-            // hide the child form
-            inventoryForm.Hide();
 
-        }
-        /// <summary>
-        /// Initialises data grid view for inventory
-        /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <param name="gridView"></param>
-        /// <param name="columnsToHide"></param>
-        private void InitializeDataGridView<T>(DataGridView gridView, params string[] columnsToHide) where T : class
-        {
-            // add the Binding List to the datagridview
-            gridView.DataSource = Controller<TheMobileShopEntities, T>.SetBindingList();
-
-            // go through the columns that we don't want to display - and set them to not visible
-            foreach (string column in columnsToHide)
-                gridView.Columns[column].Visible = false;
-            gridView.Columns["CategoryId"].HeaderText = "Category";
-            //gridView.Columns[4].ValueType = typeof(string);
-            //gridView.Columns[4].CellTemplate.ValueType = typeof(string);
-            //            MessageBox.Show(gridView.Columns["CategoryId"].DisplayIndex+"");
-            // Don't allow users to add/delete rows, and fill out columns to the entire width of the control
-            gridView.AllowUserToAddRows = false;
-            gridView.AllowUserToDeleteRows = false;
-            gridView.ReadOnly = true;
-            gridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-        }
-
-        /// <summary>
-        /// sets up cart grid controls and data
-        /// </summary>
-        /// <param name="dataGridView"></param>
-        private static void InitializeCartView(DataGridView dataGridView)
-        {
-            dataGridView.Columns.Clear();
-
-            DataGridViewTextBoxColumn[] dataGridColumns = new DataGridViewTextBoxColumn[]
-          {
-              new DataGridViewTextBoxColumn() { Name = "ID"},
-                new DataGridViewTextBoxColumn() { Name = "Name"},
-                new DataGridViewTextBoxColumn() { Name = "Category" },
-                new DataGridViewTextBoxColumn() { Name = "Brand" },
-                new DataGridViewTextBoxColumn() { Name = "Quantity" },
-                new DataGridViewTextBoxColumn() { Name = "Price" },
-                new DataGridViewTextBoxColumn() { Name = "Discount" },
-          };
-
-            dataGridView.Columns.AddRange(dataGridColumns);
-
-            // set all properties
-            dataGridView.AllowUserToAddRows = false;
-            dataGridView.AllowUserToDeleteRows = true;
-            dataGridView.ReadOnly = false;
-            dataGridView.MultiSelect = false;
-            dataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            // allow only discount to be editable
-            foreach (DataGridViewColumn dc in dataGridView.Columns)
-            {
-                dc.ReadOnly = !dc.Index.Equals(6);
-            }
-        }
-        /// <summary>
-        /// After user edits discount manually, it triggers and update data.
-        /// </summary>
-        /// <param name="dataGridView"></param>
-        private void DiscountEdit(DataGridView dataGridView)
-        {
-            foreach (DataGridViewRow row in dataGridView.Rows)
-            {
-                double idinventoryList2 = Double.Parse(row.Cells[6].Value.ToString());
-                int idinventoryList = Int32.Parse(row.Cells[0].Value.ToString());
-                for (int x = 0; x < cart.Count; x++)
-                {
-                    if (cart[x].Inventory.ProductId == idinventoryList)
-                    {
-                        cart[x].discount = idinventoryList2;
-
-                    }
-                }
-            }
-            ReloadDataGridView();
-        }
         /// <summary>
         /// get categoryname from categoryId
         /// </summary>
@@ -540,7 +499,6 @@ namespace TheMobleShopFormsApp
             loadDataToInvDataTable();
             dataGridViewInventory.Refresh();
 
-            dataGridViewCart.CellValueChanged -= DataGridViewCart_CellEndEdit;
             try
             {
                 dataGridViewCart.Rows.Clear();
@@ -572,8 +530,65 @@ namespace TheMobleShopFormsApp
             labelTaxAmount.Text = tax.ToString("C");
             labelTotal.Text = total.ToString("C");
             labelDiscountAmount.Text = "- $ " + discount.ToString("n2");
-            dataGridViewCart.CellValueChanged += DataGridViewCart_CellEndEdit;
 
+        }
+
+        /// <summary>
+        /// Hides current form, Opens child form
+        /// Shows current form once child form
+        /// Returns OK dialog (closes)
+        /// </summary>
+        /// <param name="form"></param>
+        public void OpenAndHideForm(Form form)
+        {
+            this.Hide();
+            var formDialog = form.ShowDialog();
+            if (formDialog == DialogResult.OK)
+            {
+                form.Hide();
+                this.Show();
+            }
+
+        }
+        /// <summary>
+        /// open inventory form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void ButtonInventory_Click(object sender, EventArgs e)
+        {
+            TheMobileShopInventory inventoryForm = new TheMobileShopInventory();
+            var showFormDialog = inventoryForm.ShowDialog();
+            if (showFormDialog == DialogResult.OK)
+            {
+                // reload the datagridview
+                dataGridViewInventory.DataSource = Controller<TheMobileShopEntities, Inventory>.SetBindingList();
+                loadDataToInvDataTable();
+                dataGridViewInventory.Refresh();
+            }
+            // hide the child form
+            inventoryForm.Hide();
+
+        }
+        /// <summary>
+        /// opens admin form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void ButtonAdminDashboard_Click(object sender, EventArgs e)
+        {
+            TheMobileShopAdminForm AdminForm = new TheMobileShopAdminForm();
+            OpenAndHideForm(AdminForm);
+        }
+        /// <summary>
+        /// Opens Purchase History Form and Hides current form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void ButtonPurchaseHistory_Click(object sender, EventArgs e)
+        {
+            TheMobileShopPurchaseHistory purchaseHistoryForm = new TheMobileShopPurchaseHistory();
+            OpenAndHideForm(purchaseHistoryForm);
         }
         /// <summary>
         /// Get employee info from LoginForm
@@ -597,7 +612,19 @@ namespace TheMobleShopFormsApp
                 buttonAdminDashboard.Visible = false;
             }
         }
+        /// <summary>
+        /// Logs out user and navigate to login form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void ButtonLogout_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.OK;
+            Close();
+        }
+
     }
+
     /// <summary>
     /// Inventory Item quantity class
     /// to keep track of amount of items in cart

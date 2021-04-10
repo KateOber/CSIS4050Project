@@ -10,3 +10,9 @@ C:\Users\webdev1\Documents\DevSudheer\Pers\sem4\BusOps\project\CSIS4050Project\T
 C:\Users\webdev1\Documents\DevSudheer\Pers\sem4\BusOps\project\CSIS4050Project\The Mobile Shop\DataTableAccessLayer\obj\Debug\DataTableAccessLayer.csproj.CoreCompileInputs.cache
 C:\Users\webdev1\Documents\DevSudheer\Pers\sem4\BusOps\project\CSIS4050Project\The Mobile Shop\DataTableAccessLayer\obj\Debug\DataTableAccessLayer.dll
 C:\Users\webdev1\Documents\DevSudheer\Pers\sem4\BusOps\project\CSIS4050Project\The Mobile Shop\DataTableAccessLayer\obj\Debug\DataTableAccessLayer.pdb
+C:\Users\Kate\Documents\GitHub\CSIS4050Project\The Mobile Shop\DataTableAccessLayer\bin\Debug\DataTableAccessLayer.dll
+C:\Users\Kate\Documents\GitHub\CSIS4050Project\The Mobile Shop\DataTableAccessLayer\bin\Debug\DataTableAccessLayer.pdb
+C:\Users\Kate\Documents\GitHub\CSIS4050Project\The Mobile Shop\DataTableAccessLayer\obj\Debug\DataTableAccessLayer.csprojAssemblyReference.cache
+C:\Users\Kate\Documents\GitHub\CSIS4050Project\The Mobile Shop\DataTableAccessLayer\obj\Debug\DataTableAccessLayer.csproj.CoreCompileInputs.cache
+C:\Users\Kate\Documents\GitHub\CSIS4050Project\The Mobile Shop\DataTableAccessLayer\obj\Debug\DataTableAccessLayer.dll
+C:\Users\Kate\Documents\GitHub\CSIS4050Project\The Mobile Shop\DataTableAccessLayer\obj\Debug\DataTableAccessLayer.pdb
