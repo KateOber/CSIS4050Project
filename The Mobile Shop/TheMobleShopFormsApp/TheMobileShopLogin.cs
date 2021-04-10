@@ -34,11 +34,7 @@ namespace TheMobleShopFormsApp
 
         private void TheMobileShopLogin_Load(object sender, EventArgs e)
         {
-            using (TheMobileShopEntities context = new TheMobileShopEntities())
-            {
-                context.SeedDatabase();
-            }
-
+            buttonLogin.Enabled = false;
         }
         public void GetEmployeeCode(string role)
         {
@@ -106,6 +102,16 @@ namespace TheMobleShopFormsApp
                 
             else
                 return false;
+        }
+        
+        private void buttonSeedDatabase_Click(object sender, EventArgs e)
+		{
+            using (TheMobileShopEntities context = new TheMobileShopEntities())
+            {
+                context.SeedDatabase();
+            }
+            
+            buttonLogin.Enabled = true;
         }
     }
 }
