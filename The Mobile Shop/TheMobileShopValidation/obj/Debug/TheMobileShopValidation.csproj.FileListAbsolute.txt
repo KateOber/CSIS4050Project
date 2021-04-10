@@ -13,6 +13,8 @@ C:\Users\Kate\Documents\GitHub\backup\The Mobile Shop\TheMobileShopValidation\ob
 C:\Users\Kate\Documents\GitHub\backup\The Mobile Shop\TheMobileShopValidation\obj\Debug\TheMobileShopValidation.csproj.CopyComplete
 C:\Users\Kate\Documents\GitHub\backup\The Mobile Shop\TheMobileShopValidation\obj\Debug\TheMobileShopValidation.dll
 C:\Users\Kate\Documents\GitHub\backup\The Mobile Shop\TheMobileShopValidation\obj\Debug\TheMobileShopValidation.pdb
+C:\Users\webdev1\Documents\DevSudheer\Pers\sem4\BusOps\project\CSIS4050Project\The Mobile Shop\TheMobileShopValidation\obj\Debug\TheMobileShopValidation.csprojAssemblyReference.cache
+C:\Users\webdev1\Documents\DevSudheer\Pers\sem4\BusOps\project\CSIS4050Project\The Mobile Shop\TheMobileShopValidation\obj\Debug\TheMobileShopValidation.csproj.CoreCompileInputs.cache
 C:\Users\webdev1\Documents\DevSudheer\Pers\sem4\BusOps\project\CSIS4050Project\The Mobile Shop\TheMobileShopValidation\bin\Debug\TheMobileShopValidation.dll.config
 C:\Users\webdev1\Documents\DevSudheer\Pers\sem4\BusOps\project\CSIS4050Project\The Mobile Shop\TheMobileShopValidation\bin\Debug\TheMobileShopValidation.dll
 C:\Users\webdev1\Documents\DevSudheer\Pers\sem4\BusOps\project\CSIS4050Project\The Mobile Shop\TheMobileShopValidation\bin\Debug\TheMobileShopValidation.pdb
@@ -23,8 +25,6 @@ C:\Users\webdev1\Documents\DevSudheer\Pers\sem4\BusOps\project\CSIS4050Project\T
 C:\Users\webdev1\Documents\DevSudheer\Pers\sem4\BusOps\project\CSIS4050Project\The Mobile Shop\TheMobileShopValidation\bin\Debug\TheMobileShopCodeFirstFromDB.dll.config
 C:\Users\webdev1\Documents\DevSudheer\Pers\sem4\BusOps\project\CSIS4050Project\The Mobile Shop\TheMobileShopValidation\bin\Debug\EntityFramework.xml
 C:\Users\webdev1\Documents\DevSudheer\Pers\sem4\BusOps\project\CSIS4050Project\The Mobile Shop\TheMobileShopValidation\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\webdev1\Documents\DevSudheer\Pers\sem4\BusOps\project\CSIS4050Project\The Mobile Shop\TheMobileShopValidation\obj\Debug\TheMobileShopValidation.csprojAssemblyReference.cache
-C:\Users\webdev1\Documents\DevSudheer\Pers\sem4\BusOps\project\CSIS4050Project\The Mobile Shop\TheMobileShopValidation\obj\Debug\TheMobileShopValidation.csproj.CoreCompileInputs.cache
 C:\Users\webdev1\Documents\DevSudheer\Pers\sem4\BusOps\project\CSIS4050Project\The Mobile Shop\TheMobileShopValidation\obj\Debug\TheMobileShopValidation.csproj.CopyComplete
 C:\Users\webdev1\Documents\DevSudheer\Pers\sem4\BusOps\project\CSIS4050Project\The Mobile Shop\TheMobileShopValidation\obj\Debug\TheMobileShopValidation.dll
 C:\Users\webdev1\Documents\DevSudheer\Pers\sem4\BusOps\project\CSIS4050Project\The Mobile Shop\TheMobileShopValidation\obj\Debug\TheMobileShopValidation.pdb
