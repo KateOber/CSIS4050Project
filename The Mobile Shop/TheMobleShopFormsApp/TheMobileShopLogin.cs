@@ -31,7 +31,8 @@ namespace TheMobleShopFormsApp
             buttonAdmin.Click += (s,e) => GetEmployeeCode("admin");
             buttonRegular.Click += (s, e) => GetEmployeeCode("reg");
         }
-
+	
+	//Login button is disabled until the database is loaded by the seed database button
         private void TheMobileShopLogin_Load(object sender, EventArgs e)
         {
             buttonLogin.Enabled = false;
@@ -103,7 +104,7 @@ namespace TheMobleShopFormsApp
             else
                 return false;
         }
-        
+        //the seedDatabase button will load the data into the database and then the login button is enabled.
         private void buttonSeedDatabase_Click(object sender, EventArgs e)
 		{
             using (TheMobileShopEntities context = new TheMobileShopEntities())
