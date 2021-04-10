@@ -27,7 +27,7 @@ namespace TheMobileShopCodeFirstFromDB
 
         public int Quantity { get; set; }
 
-        public int CategoryId { get; set; }
+        public string CategoryId { get; set; }
 
         [StringLength(50)]
         public string Brand { get; set; }

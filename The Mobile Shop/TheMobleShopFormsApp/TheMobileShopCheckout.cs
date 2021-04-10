@@ -21,7 +21,37 @@ namespace TheMobleShopFormsApp
             this.Load += (s, e) => TheMobileShopCheckout_Load(addedItemList);
             this.Text = "The Mobile Shop Checkout";
             buttonBack.Click += ButtonBack_Click;
+            buttonXmlExport.Click += ShowUnderProgress;
+            buttonPurchase.Click += ShowPurchaseHistoryForm;
         }
+        /// <summary>
+        /// show purchase history form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void ShowPurchaseHistoryForm(object sender, EventArgs e)
+        {
+            TheMobileShopPurchaseHistory purchaseHistoryForm = new TheMobileShopPurchaseHistory();
+            this.Hide();
+            var formDialog = purchaseHistoryForm.ShowDialog();
+            if (formDialog == DialogResult.OK)
+            {
+                purchaseHistoryForm.Hide();
+                this.Show();
+            }
+
+        }
+
+        /// <summary>
+        /// to be implemented
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void ShowUnderProgress(object sender, EventArgs e)
+        {
+            MessageBox.Show("Work Under Progress");
+        }
+
         /// <summary>
         /// loading data into datagrid view om load
         /// </summary>
@@ -80,13 +110,17 @@ namespace TheMobleShopFormsApp
             // calculate and show data into view fields.
             double tax = subTotal * 0.12;
             double? total = subTotal + tax - totalDiscount;
-            labelSubTotal.Text =  subTotal.ToString("C");   
-            labelDiscount.Text =  "$ "+Convert.ToString(totalDiscount);
+            labelSubTotal.Text = subTotal.ToString("C");
+            labelDiscount.Text = "$ " + Convert.ToString(totalDiscount);
             labelTotalNoOfItems.Text = totalQty + " Items";
-            labelTax.Text =  tax.ToString("C");
-            labelTotal.Text = total.HasValue? total.Value.ToString("C"):"$ 0.0";
+            labelTax.Text = tax.ToString("C");
+            labelTotal.Text = total.HasValue ? total.Value.ToString("C") : "$ 0.0";
         }
-
+        /// <summary>
+        /// back button click
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ButtonBack_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.OK;
