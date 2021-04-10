@@ -8,13 +8,3 @@ C:\Users\Kate\Documents\GitHub\CSIS4050Project\The Mobile Shop\TheMobileShopDB\o
 C:\Users\Kate\Documents\GitHub\CSIS4050Project\The Mobile Shop\TheMobileShopDB\obj\Debug\refactor.xml
 C:\Users\Kate\Documents\GitHub\CSIS4050Project\The Mobile Shop\TheMobileShopDB\obj\Debug\postdeploy.sql
 C:\Users\Kate\Documents\GitHub\CSIS4050Project\The Mobile Shop\TheMobileShopDB\obj\Debug\predeploy.sql
-C:\Users\webdev1\Documents\DevSudheer\Pers\sem4\BusOps\project\CSIS4050Project\The Mobile Shop\TheMobileShopDB\bin\Debug\TheMobileShopDB.dacpac
-C:\Users\webdev1\Documents\DevSudheer\Pers\sem4\BusOps\project\CSIS4050Project\The Mobile Shop\TheMobileShopDB\bin\Debug\TheMobileShopDB.dll
-C:\Users\webdev1\Documents\DevSudheer\Pers\sem4\BusOps\project\CSIS4050Project\The Mobile Shop\TheMobileShopDB\bin\Debug\TheMobileShopDB.pdb
-C:\Users\webdev1\Documents\DevSudheer\Pers\sem4\BusOps\project\CSIS4050Project\The Mobile Shop\TheMobileShopDB\obj\Debug\TheMobileShopDB.sqlprojAssemblyReference.cache
-C:\Users\webdev1\Documents\DevSudheer\Pers\sem4\BusOps\project\CSIS4050Project\The Mobile Shop\TheMobileShopDB\obj\Debug\Model.xml
-C:\Users\webdev1\Documents\DevSudheer\Pers\sem4\BusOps\project\CSIS4050Project\The Mobile Shop\TheMobileShopDB\obj\Debug\refactor.xml
-C:\Users\webdev1\Documents\DevSudheer\Pers\sem4\BusOps\project\CSIS4050Project\The Mobile Shop\TheMobileShopDB\obj\Debug\postdeploy.sql
-C:\Users\webdev1\Documents\DevSudheer\Pers\sem4\BusOps\project\CSIS4050Project\The Mobile Shop\TheMobileShopDB\obj\Debug\predeploy.sql
-C:\Users\webdev1\Documents\DevSudheer\Pers\sem4\BusOps\project\CSIS4050Project\The Mobile Shop\TheMobileShopDB\obj\Debug\TheMobileShopDB.dll
-C:\Users\webdev1\Documents\DevSudheer\Pers\sem4\BusOps\project\CSIS4050Project\The Mobile Shop\TheMobileShopDB\obj\Debug\TheMobileShopDB.pdb

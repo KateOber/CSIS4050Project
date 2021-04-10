@@ -361,7 +361,6 @@ namespace TheMobleShopFormsApp
             }
 
             dataGridViewInventory.DataSource = inventoryList;
-            loadDataToInvDataTable();
             dataGridViewInventory.Refresh();
 
         }
@@ -470,23 +469,7 @@ namespace TheMobleShopFormsApp
             }
             return "";
         }
-        /// <summary>
-        /// Test method for changing id to name for category
-        /// </summary>
-        private void loadDataToInvDataTable()
-        {
-            /*for (int i = 0; i < dataGridViewInventory.Rows.Count; i++)
-            {
-                int temp = (int)dataGridViewInventory.Rows[i].Cells[4].Value;
-                dataGridViewInventory.Rows[i].Cells[4].Value = getCategoryName(temp);
-            }*/
-            /*for (int i = 0; i < dataGridViewInventory.Rows.Count; i++)
-            {
-                string temp = dataGridViewInventory.Rows[i].Cells[6].Value.ToString();
-
-                dataGridViewInventory.Rows[i].Cells["Category"].Value = getCategoryName((int)dataGridViewInventory.Rows[i].Cells["Category"].Value);
-            }*/
-        }
+       
         /// <summary>
         /// reloads the datagrid after user changes.
         /// </summary>
@@ -496,7 +479,6 @@ namespace TheMobleShopFormsApp
             dataGridViewInventory.Rows.Clear();
             BindingList<Inventory> inventoryList = Controller<TheMobileShopEntities, Inventory>.SetBindingList();
             dataGridViewInventory.DataSource = inventoryList;
-            loadDataToInvDataTable();
             dataGridViewInventory.Refresh();
 
             try
@@ -563,7 +545,6 @@ namespace TheMobleShopFormsApp
             {
                 // reload the datagridview
                 dataGridViewInventory.DataSource = Controller<TheMobileShopEntities, Inventory>.SetBindingList();
-                loadDataToInvDataTable();
                 dataGridViewInventory.Refresh();
             }
             // hide the child form
